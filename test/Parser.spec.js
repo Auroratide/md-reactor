@@ -49,6 +49,12 @@ describe('Parser', () => {
         c: 'a'
       } ]);
     });
+
+    it('should concatenate consecutive string productions', () => {
+      const parser = new Parser([ S ]);
+      
+      expect(parser.parse('sss')).toEqual('sss');
+    });
   });
 
   class A extends Rule {
@@ -80,6 +86,16 @@ describe('Parser', () => {
 
     produce() {
       return null;
+    }
+  }
+
+  class S extends Rule {
+    constructor() {
+      super(/^s/);
+    }
+
+    produce() {
+      return 's';
     }
   }
 });
