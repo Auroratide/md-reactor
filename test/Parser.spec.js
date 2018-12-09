@@ -10,21 +10,35 @@ describe('Parser', () => {
     expect(parser.parse(undefined)).toEqual([]);
   });
 
-  it('should return an object production for a single match', () => {
-    const parser = new Parser([ A, B ]);
-    
-    expect(parser.parse('a')).toEqual({
-      c: 'a'
-    });
-    expect(parser.parse('b')).toEqual({
-      c: 'b'
-    });
-  });
-
   it('should throw an error when text cannot be parsed', () => {
     const parser = new Parser([ A ]);
     
     expect(() => parser.parse('c')).toThrow();
+  });
+
+  describe('when there are matches', () => {
+    it('should return an object production for a single match', () => {
+      const parser = new Parser([ A, B ]);
+      
+      expect(parser.parse('a')).toEqual({
+        c: 'a'
+      });
+      expect(parser.parse('b')).toEqual({
+        c: 'b'
+      });
+    });
+
+    it('should return an array of productions for multiple matches', () => {
+      const parser = new Parser([ A, B ]);
+      
+      expect(parser.parse('aba')).toEqual([ {
+        c: 'a'
+      }, {
+        c: 'b'
+      }, {
+        c: 'a'
+      } ]);
+    });
   });
 
   class A extends Rule {
