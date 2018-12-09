@@ -39,6 +39,16 @@ describe('Parser', () => {
         c: 'a'
       } ]);
     });
+
+    it('should ignore null productions in the final result', () => {
+      const parser = new Parser([ A, Null ]);
+      
+      expect(parser.parse('ana')).toEqual([ {
+        c: 'a'
+      }, {
+        c: 'a'
+      } ]);
+    });
   });
 
   class A extends Rule {
@@ -60,6 +70,16 @@ describe('Parser', () => {
     produce() {
       return new ProductionBuilder()
         .component('b').build();
+    }
+  }
+
+  class Null extends Rule {
+    constructor() {
+      super(/^n/);
+    }
+
+    produce() {
+      return null;
     }
   }
 });
