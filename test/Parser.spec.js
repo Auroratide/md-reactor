@@ -21,6 +21,12 @@ describe('Parser', () => {
     });
   });
 
+  it('should throw an error when text cannot be parsed', () => {
+    const parser = new Parser([ A ]);
+    
+    expect(() => parser.parse('c')).toThrow();
+  });
+
   class A extends Rule {
     constructor() {
       super(/^a/);
