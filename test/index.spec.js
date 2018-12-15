@@ -8,7 +8,10 @@ describe('MdReactor End to End', () => {
 
     expect(MdReactor.parse(content)).toEqual({
       c: 'p',
-      d: 'This is a paragraph.'
+      d: ['This is a paragraph with ', {
+        c: 'strong',
+        d: 'bold'
+      }, ' text.']
     });
   });
 });

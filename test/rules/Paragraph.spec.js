@@ -1,10 +1,11 @@
 const Paragraph = require('../../lib/rules/Paragraph');
+const Context = require('../util/MockContext');
 
 describe('Paragraph Rule', () => {
   let rule;
 
   beforeEach(() => {
-    rule = new Paragraph();
+    rule = new Paragraph(new Context());
   });
 
   describe('matches', () => {

@@ -1,1 +1,1 @@
-This is a paragraph.
+This is a paragraph with **bold** text.
