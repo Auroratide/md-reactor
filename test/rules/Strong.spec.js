@@ -1,10 +1,11 @@
 const Strong = require('../../lib/rules/Strong');
+const { Context } = require('../util/MockContext');
 
 describe('Strong Rule', () => {
   let rule;
 
   beforeEach(() => {
-    rule = new Strong();
+    rule = new Strong(new Context());
   });
 
   describe('matches', () => {

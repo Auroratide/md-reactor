@@ -18,6 +18,15 @@ describe('MdReactor End to End', () => {
         c: 'em',
         d: 'italicized'
       }, ' text.']
+    }, {
+      c: 'p',
+      d: ['This is a paragraph with ', {
+        c: 'strong',
+        d: ['bold and ', {
+          c: 'em',
+          d: 'italicized'
+        }]
+      }, ' text.']
     }]);
   });
 });
