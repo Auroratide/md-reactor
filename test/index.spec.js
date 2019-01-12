@@ -34,6 +34,12 @@ describe('MdReactor End to End', () => {
         }]
       }, ' text.']
     }, {
+      c: 'p',
+      d: ['This is a paragraph with ', {
+        c: 'del',
+        d: 'strikethrough'
+      }, ' text.']
+    }, {
       c: 'h1',
       d: 'h1'
     }, {
