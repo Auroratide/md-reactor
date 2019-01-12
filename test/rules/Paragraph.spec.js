@@ -1,5 +1,5 @@
 const Paragraph = require('../../lib/rules/Paragraph');
-const { Context, Parser } = require('../util/MockContext');
+const Context = require('../util/MockContext');
 
 describe('Paragraph Rule', () => {
   let rule;
@@ -8,8 +8,6 @@ describe('Paragraph Rule', () => {
 
   beforeEach(() => {
     context = new Context();
-    parser = new Parser();
-    context.inlineParser.mockReturnValue(parser);
     rule = new Paragraph(context);
   });
 
@@ -32,7 +30,7 @@ describe('Paragraph Rule', () => {
         d: 'Some text'
       });
 
-      expect(parser.parse).toHaveBeenCalledWith('Some text');
+      expect(context.asInline.parse).toHaveBeenCalledWith('Some text');
     });
   });
 });
