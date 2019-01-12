@@ -15,3 +15,9 @@ This is a paragraph with __bold and *italicized*__ text. Also, it has _italicize
 ##### h5
 
 ###### h6
+
+h1-alt
+======
+
+h2-alt
+------

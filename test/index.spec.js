@@ -51,6 +51,12 @@ describe('MdReactor End to End', () => {
     }, {
       c: 'h6',
       d: 'h6'
+    }, {
+      c: 'h1',
+      d: 'h1-alt'
+    }, {
+      c: 'h2',
+      d: 'h2-alt'
     }]);
   });
 });
