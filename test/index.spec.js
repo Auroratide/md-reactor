@@ -78,6 +78,45 @@ describe('MdReactor End to End', () => {
         c: 'li',
         d: 'Or minus as well'
       }]
+    }, {
+      c: 'ul',
+      d: [ {
+        c: 'li',
+        d: [ {
+          c: 'p',
+          d: 'This is a separate list.'
+        }, {
+          c: 'ul',
+          d: [ {
+            c: 'li',
+            d: 'It has a nested list.'
+          }, {
+            c: 'li',
+            d: [ {
+              c: 'p',
+              d: 'With multiple items.'
+            }, {
+              c: 'ul',
+              d: {
+                c: 'li',
+                d: 'That are also nested.'
+              }
+            } ]
+          }, {
+            c: 'li',
+            d: [ {
+              c: 'p',
+              d: 'Sub item 3'
+            }, {
+              c: 'p',
+              d: 'Paragraph for sub item 3'
+            } ]
+          } ]
+        }]
+      }, {
+        c: 'li',
+        d: 'Item 2'
+      } ]
     }]);
   });
 });

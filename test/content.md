@@ -28,3 +28,11 @@ h2-alt
 * Second item
 + Can use plus
 - Or minus as well
+
+* This is a separate list.
+  * It has a nested list.
+  * With multiple items.
+    * That are also nested.
+  * Sub item 3
+    Paragraph for sub item 3
+* Item 2

@@ -47,5 +47,26 @@ describe('ListItem Rule', () => {
         d: 'Item'
       });
     });
+
+    it('should parse item as inline when it is the only a single line', () => {
+      rule.matches('* Item 1\n* Item 2');
+      rule.produce();
+      
+      expect(context.asInline.parse).toHaveBeenCalledWith('Item 1');
+    });
+
+    it('should parse item as block when it is multiple lines', () => {
+      rule.matches('* Item 1\n\n  Item 2');
+      rule.produce();
+      
+      expect(context.asBlock.parse).toHaveBeenCalledWith('Item 1\n\nItem 2');
+    });
+
+    it('should parse item as block when there is a nested list', () => {
+      rule.matches('* Item 1\n  * Item 2\n  * Item 3');
+      rule.produce();
+      
+      expect(context.asBlock.parse).toHaveBeenCalledWith('Item 1\n* Item 2\n* Item 3');
+    });
   });
 });
