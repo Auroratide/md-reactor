@@ -26,6 +26,12 @@ describe('MdReactor End to End', () => {
           c: 'em',
           d: 'italicized'
         }]
+      }, ' text. Also, it has ', {
+        c: 'em',
+        d: ['italicized and ', {
+          c: 'strong',
+          d: 'bold'
+        }]
       }, ' text.']
     }]);
   });

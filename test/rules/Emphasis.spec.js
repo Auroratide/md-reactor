@@ -1,10 +1,11 @@
 const Emphasis = require('../../lib/rules/Emphasis');
+const Context = require('../util/MockContext');
 
 describe('Emphasis Rule', () => {
   let rule;
 
   beforeEach(() => {
-    rule = new Emphasis();
+    rule = new Emphasis(new Context());
   });
 
   describe('matches', () => {
