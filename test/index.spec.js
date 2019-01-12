@@ -63,6 +63,21 @@ describe('MdReactor End to End', () => {
     }, {
       c: 'h2',
       d: 'h2-alt'
+    }, {
+      c: 'ul',
+      d: [{
+        c: 'li',
+        d: 'Unordered list'
+      }, {
+        c: 'li',
+        d: 'Second item'
+      }, {
+        c: 'li',
+        d: 'Can use plus'
+      }, {
+        c: 'li',
+        d: 'Or minus as well'
+      }]
     }]);
   });
 });
