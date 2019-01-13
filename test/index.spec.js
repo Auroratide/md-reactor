@@ -79,6 +79,15 @@ describe('MdReactor End to End', () => {
         d: 'Or minus as well'
       }]
     }, {
+      c: 'ol',
+      d: [{
+        c: 'li',
+        d: 'Numeric list'
+      }, {
+        c: 'li',
+        d: 'Is cool'
+      }]
+    }, {
       c: 'ul',
       d: [ {
         c: 'li',
@@ -86,7 +95,10 @@ describe('MdReactor End to End', () => {
           c: 'p',
           d: 'This is a separate list.'
         }, {
-          c: 'ul',
+          c: 'ol',
+          p: {
+            start: '5'
+          },
           d: [ {
             c: 'li',
             d: 'It has a nested list.'

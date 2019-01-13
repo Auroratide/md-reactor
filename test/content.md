@@ -29,10 +29,13 @@ h2-alt
 + Can use plus
 - Or minus as well
 
+1. Numeric list
+2. Is cool
+
 * This is a separate list.
-  * It has a nested list.
-  * With multiple items.
+  5) It has a nested list.
+  6) With multiple items.
     * That are also nested.
-  * Sub item 3
+  7) Sub item 3
     Paragraph for sub item 3
 * Item 2
