@@ -39,3 +39,5 @@ h2-alt
   7) Sub item 3
     Paragraph for sub item 3
 * Item 2
+
+I am a [link](https://auroratide.com)!

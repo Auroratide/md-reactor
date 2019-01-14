@@ -129,6 +129,15 @@ describe('MdReactor End to End', () => {
         c: 'li',
         d: 'Item 2'
       } ]
+    }, {
+      c: 'p',
+      d: ['I am a ', {
+        c: 'a',
+        p: {
+          href: 'https://auroratide.com'
+        },
+        d: 'link'
+      }, '!']
     }]);
   });
 });
