@@ -53,6 +53,31 @@ describe('Link Rule', () => {
       });
     });
 
+    it('should represent quoted text as the link title', () => {
+      rule.matches('[Text](/link "title")');
+      
+      expect(rule.produce()).toEqual({
+        c: 'a',
+        p: {
+          href: '/link',
+          title: 'title'
+        },
+        d: 'Text'
+      });
+    });
+
+    it('should parse the first link in a series of links', () => {
+      rule.matches('[Text](/link) some text [T](/l)');
+      
+      expect(rule.produce()).toEqual({
+        c: 'a',
+        p: {
+          href: '/link'
+        },
+        d: 'Text'
+      });
+    });
+
     it('should parse link-text as inline', () => {
       rule.matches('[Text](/link)');
       rule.produce();

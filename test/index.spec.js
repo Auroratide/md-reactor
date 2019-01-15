@@ -137,7 +137,14 @@ describe('MdReactor End to End', () => {
           href: 'https://auroratide.com'
         },
         d: 'link'
-      }, '!']
+      }, '! I also support ', {
+        c: 'a',
+        p: {
+          href: 'https://auroratide.com',
+          title: 'the title'
+        },
+        d: 'titles'
+      }, '.']
     }]);
   });
 });

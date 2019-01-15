@@ -40,4 +40,4 @@ h2-alt
     Paragraph for sub item 3
 * Item 2
 
-I am a [link](https://auroratide.com)!
+I am a [link](https://auroratide.com)! I also support [titles](https://auroratide.com "the title").
