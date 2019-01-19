@@ -41,3 +41,5 @@ h2-alt
 * Item 2
 
 I am a [link](https://auroratide.com)! I also support [titles](https://auroratide.com "the title"). Finally, I support autolinks like <https://auroratide.com>.
+
+I support ![images](/file.png)

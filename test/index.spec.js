@@ -151,6 +151,15 @@ describe('MdReactor End to End', () => {
         },
         d: 'https://auroratide.com'
       }, '.']
+    }, {
+      c: 'p',
+      d: ['I support ', {
+        c: 'img',
+        p: {
+          src: '/file.png',
+          alt: 'images'
+        }
+      }]
     }]);
   });
 });
