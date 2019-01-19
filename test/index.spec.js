@@ -144,6 +144,12 @@ describe('MdReactor End to End', () => {
           title: 'the title'
         },
         d: 'titles'
+      }, '. Finally, I support autolinks like ', {
+        c: 'a',
+        p: {
+          href: 'https://auroratide.com'
+        },
+        d: 'https://auroratide.com'
       }, '.']
     }]);
   });
