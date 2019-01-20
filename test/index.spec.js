@@ -160,6 +160,12 @@ describe('MdReactor End to End', () => {
           alt: 'images'
         }
       }]
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: 'This is a code block\n\nwith newlines.'
+      }
     }]);
   });
 });
