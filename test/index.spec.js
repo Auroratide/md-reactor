@@ -570,6 +570,54 @@ describe('MdReactor End to End', () => {
         c: 'code',
         d: 'const x = 5;\n\nconsole.log(x + 2);'
       }
+    }, {
+      c: 'h2',
+      d: 'Blockquotes'
+    }, {
+      c: 'p',
+      d: ['Blockquotes are specified by prepending the line with a greater-than sign (', {
+        c: 'code',
+        d: '>'
+      }, ').']
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '> This is a blockquote.\n>\n> It can be multiple paragraphs long.'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this html...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<blockquote>\n  <p>This is a blockquote.</p>\n  <p>It can be multiple paragraphs long.</p>\n</blockquote>'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'blockquote',
+      d: [{
+        c: 'p',
+        d: 'This is a blockquote.'
+      }, {
+        c: 'p',
+        d: 'It can be multiple paragraphs long.'
+      }]
     }]);
   });
 });

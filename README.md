@@ -225,3 +225,30 @@ const x = 5;
 
 console.log(x + 2);
 ```
+
+## Blockquotes
+
+Blockquotes are specified by prepending the line with a greater-than sign (`>`).
+
+**This markdown...**
+
+```
+> This is a blockquote.
+>
+> It can be multiple paragraphs long.
+```
+
+**...becomes this html...**
+
+```
+<blockquote>
+  <p>This is a blockquote.</p>
+  <p>It can be multiple paragraphs long.</p>
+</blockquote>
+```
+
+**...which renders as this:**
+
+> This is a blockquote.
+>
+> It can be multiple paragraphs long.
