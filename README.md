@@ -143,3 +143,28 @@ Ordered and unordered lists can be created and nested within one another. It is 
 3. Third Item
   10. Lists can start
   11. at numbers other than 1
+
+## Links
+
+Links are defined using brackets followed by parentheses. The link text goes in the brackets, and the link location goes in the parentheses. An optional title may be provided in quotes with the link location.
+
+**This markdown...**
+
+```
+A sample [link to my website](https://auroratide.com)!
+
+Links may [have titles](https://auroratide.com "My Website").
+```
+
+**...becomes this html...**
+
+```
+<p>A sample <a href="https://auroratide.com">link to my website</a>!</p>
+<p>Links may <a href="https://auroratide.com" title="My Website">have titles</a>.</p>
+```
+
+**...which renders as this:**
+
+A sample [link to my website](https://auroratide.com)!
+
+Links may [have titles](https://auroratide.com "My Website").

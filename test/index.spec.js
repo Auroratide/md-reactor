@@ -418,6 +418,61 @@ describe('MdReactor End to End', () => {
           }]
         }]
       }]
+    }, {
+      c: 'h2',
+      d: 'Links'
+    }, {
+      c: 'p',
+      d: 'Links are defined using brackets followed by parentheses. The link text goes in the brackets, and the link location goes in the parentheses. An optional title may be provided in quotes with the link location.'
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: 'A sample [link to my website](https://auroratide.com)!\n\nLinks may [have titles](https://auroratide.com "My Website").'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this html...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<p>A sample <a href="https://auroratide.com">link to my website</a>!</p>\n<p>Links may <a href="https://auroratide.com" title="My Website">have titles</a>.</p>'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'p',
+      d: ['A sample ', {
+        c: 'a',
+        p: {
+          href: 'https://auroratide.com'
+        },
+        d: 'link to my website'
+      }, '!']
+    }, {
+      c: 'p',
+      d: ['Links may ', {
+        c: 'a',
+        p: {
+          href: 'https://auroratide.com',
+          title: 'My Website'
+        },
+        d: 'have titles'
+      }, '.']
     }]);
   });
 });
