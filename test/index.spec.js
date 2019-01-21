@@ -519,6 +519,57 @@ describe('MdReactor End to End', () => {
           alt: 'Auroratide Logo'
         }
       }
+    }, {
+      c: 'h2',
+      d: 'Code'
+    }, {
+      c: 'p',
+      d: 'Inline code can be defined with single backticks, and code blocks can be defined within three backticks.'
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: 'In Javascript, you can use `const` or `let` to declare a variable.\n\n```\nconst x = 5;\n\nconsole.log(x + 2);\n```'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this html...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<p>In Javascript, you can use <code>const</code> or <code>let</code> to declare a variable.</p>\n<pre>\n  <code>\n    const x = 5;\n\n    console.log(x + 2);\n  </code>\n</pre>'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'p',
+      d: ['In Javascript, you can use ', {
+        c: 'code',
+        d: 'const'
+      }, ' or ', {
+        c: 'code',
+        d: 'let'
+      }, ' to declare a variable.']
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: 'const x = 5;\n\nconsole.log(x + 2);'
+      }
     }]);
   });
 });

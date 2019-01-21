@@ -1,13 +1,13 @@
-const CodeBlock = require('../../lib/rules/CodeBlock');
+const HighlightedCodeBlock = require('../../lib/rules/HighlightedCodeBlock');
 const Context = require('../util/MockContext');
 
-describe('CodeBlock Rule', () => {
+describe('HighlightedCodeBlock Rule', () => {
   let rule;
   let context;
 
   beforeEach(() => {
     context = new Context();
-    rule = new CodeBlock(context);
+    rule = new HighlightedCodeBlock(context);
   });
 
   describe('matches', () => {

@@ -188,3 +188,40 @@ Images are defined with an exclamation point followed by the alt-text in bracket
 **...which renders as this:**
 
 ![Auroratide Logo](https://auroratide.com/assets/logo/logo_0120.png "It's an A")
+
+## Code
+
+Inline code can be defined with single backticks, and code blocks can be defined within three backticks.
+
+**This markdown...**
+
+    In Javascript, you can use `const` or `let` to declare a variable.
+    
+    ```
+    const x = 5;
+    
+    console.log(x + 2);
+    ```
+
+**...becomes this html...**
+
+```
+<p>In Javascript, you can use <code>const</code> or <code>let</code> to declare a variable.</p>
+<pre>
+  <code>
+    const x = 5;
+
+    console.log(x + 2);
+  </code>
+</pre>
+```
+
+**...which renders as this:**
+
+In Javascript, you can use `const` or `let` to declare a variable.
+
+```
+const x = 5;
+
+console.log(x + 2);
+```
