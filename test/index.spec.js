@@ -473,6 +473,52 @@ describe('MdReactor End to End', () => {
         },
         d: 'have titles'
       }, '.']
+    }, {
+      c: 'h2',
+      d: 'Images'
+    }, {
+      c: 'p',
+      d: 'Images are defined with an exclamation point followed by the alt-text in brackets, followed by the source in quotes. As with links, title text may optionally be defined in quotes with the source.'
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '![Auroratide Logo](https://auroratide.com/assets/logo/logo_0120.png "It\'s an A")'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this html...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<p><img src="https://auroratide.com/assets/logo/logo_0120.png" title="It\'s an A" alt="Auroratide Logo" /></p>'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'img',
+        p: {
+          src: 'https://auroratide.com/assets/logo/logo_0120.png',
+          title: 'It\'s an A',
+          alt: 'Auroratide Logo'
+        }
+      }
     }]);
   });
 });

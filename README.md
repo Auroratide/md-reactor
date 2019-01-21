@@ -168,3 +168,23 @@ Links may [have titles](https://auroratide.com "My Website").
 A sample [link to my website](https://auroratide.com)!
 
 Links may [have titles](https://auroratide.com "My Website").
+
+## Images
+
+Images are defined with an exclamation point followed by the alt-text in brackets, followed by the source in quotes. As with links, title text may optionally be defined in quotes with the source.
+
+**This markdown...**
+
+```
+![Auroratide Logo](https://auroratide.com/assets/logo/logo_0120.png "It's an A")
+```
+
+**...becomes this html...**
+
+```
+<p><img src="https://auroratide.com/assets/logo/logo_0120.png" title="It's an A" alt="Auroratide Logo" /></p>
+```
+
+**...which renders as this:**
+
+![Auroratide Logo](https://auroratide.com/assets/logo/logo_0120.png "It's an A")
