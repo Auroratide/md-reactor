@@ -65,3 +65,46 @@ For strikethrough, use ~~double tildes~~.
 <p>For strong emphasis (bold), use double <strong>asterisks</strong> or <strong>underlines</strong>.</p>
 <p>For strikethrough, use <del>double tildes</del>.</p>
 ```
+
+## Lists
+
+Ordered and unordered lists can be created and nested within one another. It is important to note that to nest lists, **2 spaces** are required as indentation.
+
+**This markdown...**
+
+```
+* Unordered List
+  * Sub-item 1
+  * Sub-item 2
+
+1. Ordered List
+2. Second Item
+3. Third Item
+  10. Lists can start
+  11. at numbers other than 1
+```
+
+**...becomes this:**
+
+```
+<ul>
+  <li>
+    <p>Unordered List</p>
+    <ul>
+      <li>Sub-item 1</li>
+      <li>Sub-item 2</li>
+    </ul>
+  </li>
+</ul>
+<ol>
+  <li>Ordered List</li>
+  <li>Second Item</li>
+  <li>
+    <p>Third Item</p>
+    <ol start="10">
+      <li>Lists can start</li>
+      <li>at numbers other than 1</li>
+    </ol>
+  </li>
+</ol>
+```

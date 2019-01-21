@@ -274,6 +274,39 @@ describe('MdReactor End to End', () => {
         c: 'code',
         d: '<p>For basic emphasis (italics), use single <em>asterisks</em> or <em>underlines</em>.</p>\n<p>For strong emphasis (bold), use double <strong>asterisks</strong> or <strong>underlines</strong>.</p>\n<p>For strikethrough, use <del>double tildes</del>.</p>'
       }
+    }, {
+      c: 'h2',
+      d: 'Lists'
+    }, {
+      c: 'p',
+      d: ['Ordered and unordered lists can be created and nested within one another. It is important to note that to nest lists, ', {
+        c: 'strong',
+        d: '2 spaces'
+      }, ' are required as indentation.']
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '* Unordered List\n  * Sub-item 1\n  * Sub-item 2\n\n1. Ordered List\n2. Second Item\n3. Third Item\n  10. Lists can start\n  11. at numbers other than 1'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this:'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<ul>\n  <li>\n    <p>Unordered List</p>\n    <ul>\n      <li>Sub-item 1</li>\n      <li>Sub-item 2</li>\n    </ul>\n  </li>\n</ul>\n<ol>\n  <li>Ordered List</li>\n  <li>Second Item</li>\n  <li>\n    <p>Third Item</p>\n    <ol start="10">\n      <li>Lists can start</li>\n      <li>at numbers other than 1</li>\n    </ol>\n  </li>\n</ol>'
+      }
     }]);
   });
 });
