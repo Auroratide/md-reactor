@@ -168,4 +168,82 @@ describe('MdReactor End to End', () => {
       }
     }]);
   });
+
+  it('should parse the README', () => {
+    const content = fs.readFileSync(path.join(__dirname, '..', 'README.md'), 'utf-8');
+
+    expect(MdReactor.parse(content)).toEqual([{
+      c: 'h1',
+      d: 'md-reactor'
+    }, {
+      c: 'p',
+      d: [{
+        c: 'strong',
+        d: 'md-reactor'
+      }, ' is a utility library for parsing and rendering ', {
+        c: 'strong',
+        d: 'markdown'
+      }, ' in ', {
+        c: 'strong',
+        d: 'React'
+      }, ' applications. Hence the name!']
+    }, {
+      c: 'p',
+      d: 'By the way, this very README file is used for end-to-end testing the library!'
+    }, {
+      c: 'h1',
+      d: 'Supported Syntax'
+    }, {
+      c: 'p',
+      d: ['It turns out there are lots of ways markdown can be parsed and interpretted, leading to specs such as the ', {
+        c: 'a',
+        p: {
+          href: 'https://spec.commonmark.org/'
+        },
+        d: 'CommonMark Spec'
+      }, ', as well as different non-canonical extensions such as ', {
+        c: 'a',
+        p: {
+          href: 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables'
+        },
+        d: 'Github\'s table syntax'
+      }, '. At present, ', {
+        c: 'strong',
+        d: 'md-reactor'
+      }, ' does not attempt to follow any one spec, though you\'ll find it most similarly follows Github\'s flavor of markdown.']
+    }, {
+      c: 'p',
+      d: 'Below shows the currently supported syntax, as well as how they will be rendered into HTML.'
+    }, {
+      c: 'h2',
+      d: 'Headers'
+    }, {
+      c: 'p',
+      d: 'You may either use hashes to define headers or the underline style. Headers up to h6 are supported. In order to use the underline-style syntax, at least three "=" or "-" are needed.'
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '# Header 1\n## Header 2\n### Header 3\n#### Header 4\n##### Header 5\n###### Header 6\n\nHeader 1 Alt\n======\n\nHeader 2 Alt\n------'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this:'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<h1>Header 1</h1>\n<h2>Header 2</h2>\n<h3>Header 3</h3>\n<h4>Header 4</h4>\n<h5>Header 5</h5>\n<h6>Header 6</h6>\n<h1>Header 1 Alt</h1>\n<h2>Header 2 Alt</h2>'
+      }
+    }]);
+  });
 });
