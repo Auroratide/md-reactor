@@ -43,3 +43,25 @@ Header 2 Alt
 <h1>Header 1 Alt</h1>
 <h2>Header 2 Alt</h2>
 ```
+
+## Emphasis
+
+Asterisks and underscores can be used to define emphasis, like italics or bold. Tildes can be used for strikethrough text.
+
+**This markdown...**
+
+```
+For basic emphasis (italics), use single *asterisks* or _underlines_.
+
+For strong emphasis (bold), use double **asterisks** or __underlines__.
+
+For strikethrough, use ~~double tildes~~.
+```
+
+**...becomes this:**
+
+```
+<p>For basic emphasis (italics), use single <em>asterisks</em> or <em>underlines</em>.</p>
+<p>For strong emphasis (bold), use double <strong>asterisks</strong> or <strong>underlines</strong>.</p>
+<p>For strikethrough, use <del>double tildes</del>.</p>
+```

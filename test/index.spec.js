@@ -244,6 +244,36 @@ describe('MdReactor End to End', () => {
         c: 'code',
         d: '<h1>Header 1</h1>\n<h2>Header 2</h2>\n<h3>Header 3</h3>\n<h4>Header 4</h4>\n<h5>Header 5</h5>\n<h6>Header 6</h6>\n<h1>Header 1 Alt</h1>\n<h2>Header 2 Alt</h2>'
       }
+    }, {
+      c: 'h2',
+      d: 'Emphasis'
+    }, {
+      c: 'p',
+      d: 'Asterisks and underscores can be used to define emphasis, like italics or bold. Tildes can be used for strikethrough text.'
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: 'For basic emphasis (italics), use single *asterisks* or _underlines_.\n\nFor strong emphasis (bold), use double **asterisks** or __underlines__.\n\nFor strikethrough, use ~~double tildes~~.'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this:'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<p>For basic emphasis (italics), use single <em>asterisks</em> or <em>underlines</em>.</p>\n<p>For strong emphasis (bold), use double <strong>asterisks</strong> or <strong>underlines</strong>.</p>\n<p>For strikethrough, use <del>double tildes</del>.</p>'
+      }
     }]);
   });
 });
