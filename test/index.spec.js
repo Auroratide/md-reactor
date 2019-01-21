@@ -236,7 +236,7 @@ describe('MdReactor End to End', () => {
       c: 'p',
       d: {
         c: 'strong',
-        d: '...becomes this:'
+        d: '...becomes this html...'
       }
     }, {
       c: 'pre',
@@ -244,6 +244,36 @@ describe('MdReactor End to End', () => {
         c: 'code',
         d: '<h1>Header 1</h1>\n<h2>Header 2</h2>\n<h3>Header 3</h3>\n<h4>Header 4</h4>\n<h5>Header 5</h5>\n<h6>Header 6</h6>\n<h1>Header 1 Alt</h1>\n<h2>Header 2 Alt</h2>'
       }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'h1',
+      d: 'Header 1'
+    }, {
+      c: 'h2',
+      d: 'Header 2'
+    }, {
+      c: 'h3',
+      d: 'Header 3'
+    }, {
+      c: 'h4',
+      d: 'Header 4'
+    }, {
+      c: 'h5',
+      d: 'Header 5'
+    }, {
+      c: 'h6',
+      d: 'Header 6'
+    }, {
+      c: 'h1',
+      d: 'Header 1 Alt'
+    }, {
+      c: 'h2',
+      d: 'Header 2 Alt'
     }, {
       c: 'h2',
       d: 'Emphasis'
@@ -266,7 +296,7 @@ describe('MdReactor End to End', () => {
       c: 'p',
       d: {
         c: 'strong',
-        d: '...becomes this:'
+        d: '...becomes this html...'
       }
     }, {
       c: 'pre',
@@ -274,6 +304,36 @@ describe('MdReactor End to End', () => {
         c: 'code',
         d: '<p>For basic emphasis (italics), use single <em>asterisks</em> or <em>underlines</em>.</p>\n<p>For strong emphasis (bold), use double <strong>asterisks</strong> or <strong>underlines</strong>.</p>\n<p>For strikethrough, use <del>double tildes</del>.</p>'
       }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'p',
+      d: ['For basic emphasis (italics), use single ', {
+        c: 'em',
+        d: 'asterisks'
+      }, ' or ', {
+        c: 'em',
+        d: 'underlines'
+      }, '.']
+    }, {
+      c: 'p',
+      d: ['For strong emphasis (bold), use double ', {
+        c: 'strong',
+        d: 'asterisks'
+      }, ' or ', {
+        c: 'strong',
+        d: 'underlines'
+      }, '.']
+    }, {
+      c: 'p',
+      d: ['For strikethrough, use ', {
+        c: 'del',
+        d: 'double tildes'
+      }, '.']
     }, {
       c: 'h2',
       d: 'Lists'
@@ -299,7 +359,7 @@ describe('MdReactor End to End', () => {
       c: 'p',
       d: {
         c: 'strong',
-        d: '...becomes this:'
+        d: '...becomes this html...'
       }
     }, {
       c: 'pre',
@@ -307,6 +367,57 @@ describe('MdReactor End to End', () => {
         c: 'code',
         d: '<ul>\n  <li>\n    <p>Unordered List</p>\n    <ul>\n      <li>Sub-item 1</li>\n      <li>Sub-item 2</li>\n    </ul>\n  </li>\n</ul>\n<ol>\n  <li>Ordered List</li>\n  <li>Second Item</li>\n  <li>\n    <p>Third Item</p>\n    <ol start="10">\n      <li>Lists can start</li>\n      <li>at numbers other than 1</li>\n    </ol>\n  </li>\n</ol>'
       }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'ul',
+      d: {
+        c: 'li',
+        d: [{
+          c: 'p',
+          d: 'Unordered List'
+        }, {
+          c: 'ul',
+          d: [{
+            c: 'li',
+            d: 'Sub-item 1'
+          }, {
+            c: 'li',
+            d: 'Sub-item 2'
+          }]
+        }]
+      }
+    }, {
+      c: 'ol',
+      d: [{
+        c: 'li',
+        d: 'Ordered List'
+      }, {
+        c: 'li',
+        d: 'Second Item'
+      }, {
+        c: 'li',
+        d: [{
+          c: 'p',
+          d: 'Third Item'
+        }, {
+          c: 'ol',
+          p: {
+            start: '10'
+          },
+          d: [{
+            c: 'li',
+            d: 'Lists can start'
+          }, {
+            c: 'li',
+            d: 'at numbers other than 1'
+          }]
+        }]
+      }]
     }]);
   });
 });

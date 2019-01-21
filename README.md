@@ -31,7 +31,7 @@ Header 2 Alt
 ------
 ```
 
-**...becomes this:**
+**...becomes this html...**
 
 ```
 <h1>Header 1</h1>
@@ -43,6 +43,21 @@ Header 2 Alt
 <h1>Header 1 Alt</h1>
 <h2>Header 2 Alt</h2>
 ```
+
+**...which renders as this:**
+
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+
+Header 1 Alt
+======
+
+Header 2 Alt
+------
 
 ## Emphasis
 
@@ -58,13 +73,21 @@ For strong emphasis (bold), use double **asterisks** or __underlines__.
 For strikethrough, use ~~double tildes~~.
 ```
 
-**...becomes this:**
+**...becomes this html...**
 
 ```
 <p>For basic emphasis (italics), use single <em>asterisks</em> or <em>underlines</em>.</p>
 <p>For strong emphasis (bold), use double <strong>asterisks</strong> or <strong>underlines</strong>.</p>
 <p>For strikethrough, use <del>double tildes</del>.</p>
 ```
+
+**...which renders as this:**
+
+For basic emphasis (italics), use single *asterisks* or _underlines_.
+
+For strong emphasis (bold), use double **asterisks** or __underlines__.
+
+For strikethrough, use ~~double tildes~~.
 
 ## Lists
 
@@ -84,7 +107,7 @@ Ordered and unordered lists can be created and nested within one another. It is 
   11. at numbers other than 1
 ```
 
-**...becomes this:**
+**...becomes this html...**
 
 ```
 <ul>
@@ -108,3 +131,15 @@ Ordered and unordered lists can be created and nested within one another. It is 
   </li>
 </ol>
 ```
+
+**...which renders as this:**
+
+* Unordered List
+  * Sub-item 1
+  * Sub-item 2
+
+1. Ordered List
+2. Second Item
+3. Third Item
+  10. Lists can start
+  11. at numbers other than 1
