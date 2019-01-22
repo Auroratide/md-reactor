@@ -618,6 +618,48 @@ describe('MdReactor End to End', () => {
         c: 'p',
         d: 'It can be multiple paragraphs long.'
       }]
+    }, {
+      c: 'h2',
+      d: 'Horizontal Rule'
+    }, {
+      c: 'p',
+      d: 'A horizontal rule can be created with at least three hyphens, asterisks, or underscores.'
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: 'This markdown...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '-----\n\n*****\n\n_____'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...becomes this html...'
+      }
+    }, {
+      c: 'pre',
+      d: {
+        c: 'code',
+        d: '<hr />\n<hr />\n<hr />'
+      }
+    }, {
+      c: 'p',
+      d: {
+        c: 'strong',
+        d: '...which renders as this:'
+      }
+    }, {
+      c: 'hr'
+    }, {
+      c: 'hr'
+    }, {
+      c: 'hr'
     }]);
   });
 });

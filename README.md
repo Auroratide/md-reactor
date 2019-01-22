@@ -226,3 +226,29 @@ Blockquotes are specified by prepending the line with a greater-than sign (`>`).
 > This is a blockquote.
 >
 > It can be multiple paragraphs long.
+
+## Horizontal Rule
+
+A horizontal rule can be created with at least three hyphens, asterisks, or underscores.
+
+**This markdown...**
+
+    -----
+    
+    *****
+    
+    _____
+
+**...becomes this html...**
+
+    <hr />
+    <hr />
+    <hr />
+
+**...which renders as this:**
+
+-----
+
+*****
+
+_____
