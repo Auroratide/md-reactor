@@ -1,5 +1,5 @@
-const Emphasis = require('../../lib/rules/Emphasis');
-const Context = require('../util/MockContext');
+const Emphasis = require('../../../lib/parsing/rules/Emphasis');
+const Context = require('../../util/MockContext');
 
 describe('Emphasis Rule', () => {
   let rule;

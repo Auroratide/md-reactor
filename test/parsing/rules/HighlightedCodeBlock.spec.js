@@ -1,5 +1,5 @@
-const HighlightedCodeBlock = require('../../lib/rules/HighlightedCodeBlock');
-const Context = require('../util/MockContext');
+const HighlightedCodeBlock = require('../../../lib/parsing/rules/HighlightedCodeBlock');
+const Context = require('../../util/MockContext');
 
 describe('HighlightedCodeBlock Rule', () => {
   let rule;

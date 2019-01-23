@@ -1,7 +1,7 @@
 const React = require('react');
-const Renderer = require('../lib/Renderer');
-const ProductionBuilder = require('../lib/ProductionBuilder');
-const { shallow } = require('./util/enzyme');
+const Renderer = require('../../lib/rendering/Renderer');
+const ProductionBuilder = require('../../lib/parsing/ProductionBuilder');
+const { shallow } = require('../util/enzyme');
 
 describe('Renderer', () => {
   describe('base cases', () => {

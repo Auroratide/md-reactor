@@ -1,5 +1,5 @@
-const Strong = require('../../lib/rules/Strong');
-const Context = require('../util/MockContext');
+const Strong = require('../../../lib/parsing/rules/Strong');
+const Context = require('../../util/MockContext');
 
 describe('Strong Rule', () => {
   let rule;

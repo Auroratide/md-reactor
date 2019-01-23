@@ -1,16 +1,28 @@
-const OrderedList = require('../../lib/rules/OrderedList');
-const Context = require('../util/MockContext');
+const ListItem = require('../../../lib/parsing/rules/ListItem');
+const Context = require('../../util/MockContext');
 
-describe('OrderedList Rule', () => {
+describe('ListItem Rule', () => {
   let rule;
   let context;
 
   beforeEach(() => {
     context = new Context();
-    rule = new OrderedList(context);
+    rule = new ListItem(context);
   });
 
   describe('matches', () => {
+    it('should match an asterick', () => {
+      expect(rule.matches('* List')).toBeTruthy();
+    });
+
+    it('should match a plus', () => {
+      expect(rule.matches('+ List')).toBeTruthy();
+    });
+
+    it('should match a minus', () => {
+      expect(rule.matches('- List')).toBeTruthy();
+    });
+
     it('should match a number with a period', () => {
       expect(rule.matches('0. List')).toBeTruthy();
       expect(rule.matches('1. List')).toBeTruthy();
@@ -43,6 +55,9 @@ describe('OrderedList Rule', () => {
     });
 
     it('should not match when there are no spaces between the list indicator and the text', () => {
+      expect(rule.matches('*List')).toBeFalsy();
+      expect(rule.matches('-List')).toBeFalsy();
+      expect(rule.matches('+List')).toBeFalsy();
       expect(rule.matches('1.List')).toBeFalsy();
       expect(rule.matches('1)List')).toBeFalsy();
     });
@@ -50,52 +65,41 @@ describe('OrderedList Rule', () => {
     it('should not match ordinary text', () => {
       expect(rule.matches('Ordinary Text')).toBeFalsy();
     });
+
+    it('should not match text prepended with a space', () => {
+      expect(rule.matches(' Ordinary Text')).toBeFalsy();
+    });
   });
 
   describe('produce', () => {
     it('should create production', () => {
-      rule.matches('1. List');
+      rule.matches('* Item');
       
       expect(rule.produce()).toEqual({
-        c: 'ol',
-        d: {
-          c: 'li',
-          d: 'List'
-        }
+        c: 'li',
+        d: 'Item'
       });
     });
 
-    it('should keep all list items in a single list', () => {
-      rule.matches('1. Item 1\n2. Item 2\nIrrelevant text');
+    it('should parse item as inline when it is the only a single line', () => {
+      rule.matches('* Item 1\n* Item 2');
+      rule.produce();
       
-      expect(rule.produce()).toEqual({
-        c: 'ol',
-        d: [ {
-          c: 'li',
-          d: 'Item 1'
-        }, {
-          c: 'li',
-          d: 'Item 2'
-        } ]
-      });
+      expect(context.asInline.parse).toHaveBeenCalledWith('Item 1');
     });
 
-    it('should start the list at the first numeric location', () => {
-      rule.matches('2. List\n3. List');
+    it('should parse item as block when it is multiple lines', () => {
+      rule.matches('* Item 1\n\n  Item 2');
+      rule.produce();
       
-      expect(rule.produce()).toEqual({
-        c: 'ol',
-        p: {
-          start: '2'
-        },
-        d: [{
-          c: 'li',
-          d: 'List'
-        }, {
-          c: 'li',
-          d: 'List'
-        }]
-      });
+      expect(context.asBlock.parse).toHaveBeenCalledWith('Item 1\n\nItem 2');
+    });
+
+    it('should parse item as block when there is a nested list', () => {
+      rule.matches('* Item 1\n  * Item 2\n  * Item 3');
+      rule.produce();
+      
+      expect(context.asBlock.parse).toHaveBeenCalledWith('Item 1\n* Item 2\n* Item 3');
     });
   });
 });

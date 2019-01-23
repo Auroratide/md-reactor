@@ -1,5 +1,5 @@
-const Image = require('../../lib/rules/Image');
-const Context = require('../util/MockContext');
+const Image = require('../../../lib/parsing/rules/Image');
+const Context = require('../../util/MockContext');
 
 describe('Image Rule', () => {
   let rule;

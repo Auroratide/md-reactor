@@ -1,4 +1,4 @@
-const Character = require('../../lib/rules/Character');
+const Character = require('../../../lib/parsing/rules/Character');
 
 describe('Character Rule', () => {
   let rule;

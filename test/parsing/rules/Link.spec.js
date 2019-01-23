@@ -1,5 +1,5 @@
-const Link = require('../../lib/rules/Link');
-const Context = require('../util/MockContext');
+const Link = require('../../../lib/parsing/rules/Link');
+const Context = require('../../util/MockContext');
 
 describe('Link Rule', () => {
   let rule;

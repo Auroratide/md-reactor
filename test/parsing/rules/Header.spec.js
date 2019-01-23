@@ -1,5 +1,5 @@
-const Header = require('../../lib/rules/Header');
-const Context = require('../util/MockContext');
+const Header = require('../../../lib/parsing/rules/Header');
+const Context = require('../../util/MockContext');
 
 describe('Header Rule', () => {
   let rule;

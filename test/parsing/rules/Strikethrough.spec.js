@@ -1,5 +1,5 @@
-const Strikethrough = require('../../lib/rules/Strikethrough');
-const Context = require('../util/MockContext');
+const Strikethrough = require('../../../lib/parsing/rules/Strikethrough');
+const Context = require('../../util/MockContext');
 
 describe('Strikethrough Rule', () => {
   let rule;

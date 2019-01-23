@@ -1,5 +1,5 @@
-const AutoLink = require('../../lib/rules/AutoLink');
-const Context = require('../util/MockContext');
+const AutoLink = require('../../../lib/parsing/rules/AutoLink');
+const Context = require('../../util/MockContext');
 
 describe('AutoLink Rule', () => {
   let rule;
