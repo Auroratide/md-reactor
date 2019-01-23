@@ -10,8 +10,14 @@
   "author": "Timothy Foster",
   "license": "ISC",
   "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.10.0",
     "eslint-plugin-jest": "^22.1.2",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "react-dom": "^16.7.0"
+  },
+  "dependencies": {
+    "react": "^16.7.0"
   }
 }
