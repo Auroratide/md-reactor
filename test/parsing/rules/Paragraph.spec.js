@@ -4,7 +4,6 @@ const Context = require('../../util/MockContext');
 describe('Paragraph Rule', () => {
   let rule;
   let context;
-  let parser;
 
   beforeEach(() => {
     context = new Context();
