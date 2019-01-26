@@ -69,6 +69,16 @@ describe('Renderer', () => {
 
       expect(wrapper.contains(<strong><em>text</em></strong>)).toBe(true);
     });
+
+    it('should render custom components', () => {
+      const MyComponent = () => <div></div>;
+      const library = { MyComponent };
+      const value = new ProductionBuilder().component('MyComponent').build();
+
+      const wrapper = shallow(<Renderer value={value} library={library} />);
+
+      expect(wrapper.contains(<MyComponent />)).toBe(true);
+    });
   });
 
   describe('arrays', () => {
