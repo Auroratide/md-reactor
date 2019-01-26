@@ -1,7 +1,7 @@
-const React = require('react');
-const Renderer = require('../../lib/rendering/Renderer');
-const ProductionBuilder = require('../../lib/parsing/ProductionBuilder');
-const { shallow } = require('../util/enzyme');
+import React from 'react';
+import Renderer from '../../lib/rendering/Renderer';
+import ProductionBuilder from '../../lib/parsing/ProductionBuilder';
+import { shallow } from '../util/enzyme';
 
 describe('Renderer', () => {
   describe('base cases', () => {
@@ -25,13 +25,6 @@ describe('Renderer', () => {
 
       expect(wrapper.text()).toEqual('5');
     });
-
-    it('should render a html element without children', () => {
-      const value = { c: 'hr' };
-      const wrapper = shallow(React.createElement(Renderer, { value }));
-
-      expect(wrapper.find('hr').exists()).toBe(true);
-    });
   });
 
   describe('components', () => {
@@ -39,7 +32,7 @@ describe('Renderer', () => {
       const value = new ProductionBuilder().component('hr').build();
       const wrapper = shallow(React.createElement(Renderer, { value }));
 
-      expect(wrapper.find('hr').exists()).toBe(true);
+      expect(wrapper.contains(<hr />)).toBe(true);
     });
 
     it('should render a html element with children', () => {
@@ -49,9 +42,7 @@ describe('Renderer', () => {
         .build();
       const wrapper = shallow(React.createElement(Renderer, { value }));
 
-      const p = wrapper.find('p');
-      expect(p.exists()).toBe(true);
-      expect(p.text()).toEqual('text');
+      expect(wrapper.contains(<p>text</p>)).toBe(true);
     });
 
     it('should render a component with props', () => {
@@ -62,10 +53,8 @@ describe('Renderer', () => {
         })
         .build();
       const wrapper = shallow(React.createElement(Renderer, { value }));
-      
-      const img = wrapper.find('img');
-      expect(img.exists()).toBe(true);
-      expect(img.props().src).toEqual('/img.png');
+
+      expect(wrapper.contains(<img src='/img.png' />)).toBe(true);
     });
 
     it('should render nested structures', () => {
@@ -78,11 +67,7 @@ describe('Renderer', () => {
         .build();
       const wrapper = shallow(React.createElement(Renderer, { value }));
 
-      const strong = wrapper.find('strong');
-      const em = strong.find('em');
-      expect(strong.exists()).toBe(true);
-      expect(em.exists()).toBe(true);
-      expect(em.text()).toEqual('text');
+      expect(wrapper.contains(<strong><em>text</em></strong>)).toBe(true);
     });
   });
 
@@ -102,11 +87,8 @@ describe('Renderer', () => {
       const wrapper = shallow(React.createElement(Renderer, { value }));
 
       expect(wrapper).toHaveLength(2);
-      const hr = wrapper.at(0);
-      const p = wrapper.at(1);
-      expect(hr.name()).toEqual('hr');
-      expect(p.name()).toEqual('p');
-      expect(p.text()).toEqual('text');
+      expect(wrapper.at(0).contains(<hr />)).toBe(true);
+      expect(wrapper.at(1).contains(<p>text</p>)).toBe(true);
     });
   });
 });
