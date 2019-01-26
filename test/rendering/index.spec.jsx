@@ -127,6 +127,20 @@ describe('md-reactor renderer', () => {
       <hr />
       <hr />
       <hr />
+
+      <h2>Inline HTML</h2>
+      <p>You may also use inline HTML, which is especially useful for tags without a markdown equivalent. Note, however, that markdown syntax cannot be used within HTML.</p>
+      <p><strong>This markdown...</strong></p>
+      <pre><code>{'<dl>\n  <dt>Definition List</dt>\n  <dd>Can be used with inline HTML</dd>\n\n  <dt>Markdown in HTML</dt>\n  <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>\n</dl>'}</code></pre>
+      <p><strong>...becomes this html...</strong></p>
+      <pre><code>{'<dl>\n  <dt>Definition List</dt>\n  <dd>Can be used with inline HTML</dd>\n\n  <dt>Markdown in HTML</dt>\n  <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>\n</dl>'}</code></pre>
+      <p><strong>...which renders as this:</strong></p>
+      <dl>
+        <dt>Definition List</dt>
+        <dd>Can be used with inline HTML</dd>
+        <dt>Markdown in HTML</dt>
+        <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
+      </dl>
     </div>)).toBe(true);
   });
 });

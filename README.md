@@ -252,3 +252,36 @@ A horizontal rule can be created with at least three hyphens, asterisks, or unde
 *****
 
 _____
+
+## Inline HTML
+
+You may also use inline HTML, which is especially useful for tags without a markdown equivalent. Note, however, that markdown syntax cannot be used within HTML.
+
+**This markdown...**
+
+    <dl>
+      <dt>Definition List</dt>
+      <dd>Can be used with inline HTML</dd>
+    
+      <dt>Markdown in HTML</dt>
+      <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
+    </dl>
+
+**...becomes this html...**
+
+    <dl>
+      <dt>Definition List</dt>
+      <dd>Can be used with inline HTML</dd>
+    
+      <dt>Markdown in HTML</dt>
+      <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
+    </dl>
+
+**...which renders as this:**
+
+<dl>
+  <dt>Definition List</dt>
+  <dd>Can be used with inline HTML</dd>
+  <dt>Markdown in HTML</dt>
+  <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
+</dl>

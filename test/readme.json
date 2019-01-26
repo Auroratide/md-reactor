@@ -486,4 +486,58 @@
   "c": "hr"
 }, {
   "c": "hr"
+}, {
+  "c": "h2",
+  "d": "Inline HTML"
+}, {
+  "c": "p",
+  "d": "You may also use inline HTML, which is especially useful for tags without a markdown equivalent. Note, however, that markdown syntax cannot be used within HTML."
+}, {
+  "c": "p",
+  "d": {
+    "c": "strong",
+    "d": "This markdown..."
+  }
+}, {
+  "c": "pre",
+  "d": {
+    "c": "code",
+    "d": "<dl>\n  <dt>Definition List</dt>\n  <dd>Can be used with inline HTML</dd>\n\n  <dt>Markdown in HTML</dt>\n  <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>\n</dl>"
+  }
+}, {
+  "c": "p",
+  "d": {
+    "c": "strong",
+    "d": "...becomes this html..."
+  }
+}, {
+  "c": "pre",
+  "d": {
+    "c": "code",
+    "d": "<dl>\n  <dt>Definition List</dt>\n  <dd>Can be used with inline HTML</dd>\n\n  <dt>Markdown in HTML</dt>\n  <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>\n</dl>"
+  }
+}, {
+  "c": "p",
+  "d": {
+    "c": "strong",
+    "d": "...which renders as this:"
+  }
+}, {
+  "c": "dl",
+  "d": [{
+    "c": "dt",
+    "d": "Definition List"
+  }, {
+    "c": "dd",
+    "d": "Can be used with inline HTML"
+  }, {
+    "c": "dt",
+    "d": "Markdown in HTML"
+  }, {
+    "c": "dd",
+    "d": ["Does not **work**. ", {
+      "c": "strong",
+      "d": "Tags"
+    }, " work instead."]
+  }]
 }]
