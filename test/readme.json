@@ -18,6 +18,45 @@
   "d": "By the way, this very README file is used for end-to-end testing the library!"
 }, {
   "c": "h1",
+  "d": "Usage"
+}, {
+  "c": "p",
+  "d": ["In ", {
+    "c": "strong",
+    "d": "md-reactor"
+  }, ", there is ", {
+    "c": "strong",
+    "d": "parsing"
+  }, " and ", {
+    "c": "strong",
+    "d": "rendering"
+  }, ". The Parser takes as input a string containing markdown and converts it into an object representation of the document. The Renderer is a React component that takes that object representation and converts it into the appropriate components to show on a web page."]
+}, {
+  "c": "p",
+  "d": {
+    "c": "strong",
+    "d": "First, parse the markdown:"
+  }
+}, {
+  "c": "pre",
+  "d": {
+    "c": "code",
+    "d": "import Parser from 'md-reactor/parsing';\n\nconst object = Parser.parse(markdown);"
+  }
+}, {
+  "c": "p",
+  "d": {
+    "c": "strong",
+    "d": "Second, render the object:"
+  }
+}, {
+  "c": "pre",
+  "d": {
+    "c": "code",
+    "d": "import React from 'react';\nimport Renderer from 'md-reactor/rendering';\n\nconst Content = ({ contentObject }) =>\n  <div className='content'>\n    <Renderer value={contentObject} />\n  </div>;"
+  }
+}, {
+  "c": "h1",
   "d": "Supported Syntax"
 }, {
   "c": "p",

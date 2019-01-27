@@ -17,6 +17,14 @@ describe('md-reactor renderer', () => {
       <h1>md-reactor</h1>
       <p><strong>md-reactor</strong> is a utility library for parsing and rendering <strong>markdown</strong> in <strong>React</strong> applications. Hence the name!</p>
       <p>By the way, this very README file is used for end-to-end testing the library!</p>
+
+      <h1>Usage</h1>
+      <p>In <strong>md-reactor</strong>, there is <strong>parsing</strong> and <strong>rendering</strong>. The Parser takes as input a string containing markdown and converts it into an object representation of the document. The Renderer is a React component that takes that object representation and converts it into the appropriate components to show on a web page.</p>
+      <p><strong>First, parse the markdown:</strong></p>
+      <pre><code>{'import Parser from \'md-reactor/parsing\';\n\nconst object = Parser.parse(markdown);'}</code></pre>
+      <p><strong>Second, render the object:</strong></p>
+      <pre><code>{'import React from \'react\';\nimport Renderer from \'md-reactor/rendering\';\n\nconst Content = ({ contentObject }) =>\n  <div className=\'content\'>\n    <Renderer value={contentObject} />\n  </div>;'}</code></pre>
+
       <h1>Supported Syntax</h1>
       <p>It turns out there are lots of ways markdown can be parsed and interpretted, leading to specs such as the <a href="https://spec.commonmark.org/">CommonMark Spec</a>, as well as different non-canonical extensions such as <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables">Github's table syntax</a>. At present, <strong>md-reactor</strong> does not attempt to follow any one spec, though you'll find it most similarly follows Github's flavor of markdown.</p>
       <p>Below shows the currently supported syntax, as well as how they will be rendered into HTML.</p>

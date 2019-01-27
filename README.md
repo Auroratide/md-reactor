@@ -4,6 +4,30 @@
 
 By the way, this very README file is used for end-to-end testing the library!
 
+# Usage
+
+In **md-reactor**, there is **parsing** and **rendering**. The Parser takes as input a string containing markdown and converts it into an object representation of the document. The Renderer is a React component that takes that object representation and converts it into the appropriate components to show on a web page.
+
+**First, parse the markdown:**
+
+```
+import Parser from 'md-reactor/parsing';
+
+const object = Parser.parse(markdown);
+```
+
+**Second, render the object:**
+
+```
+import React from 'react';
+import Renderer from 'md-reactor/rendering';
+
+const Content = ({ contentObject }) =>
+  <div className='content'>
+    <Renderer value={contentObject} />
+  </div>;
+```
+
 # Supported Syntax
 
 It turns out there are lots of ways markdown can be parsed and interpretted, leading to specs such as the [CommonMark Spec](https://spec.commonmark.org/), as well as different non-canonical extensions such as [Github's table syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables). At present, **md-reactor** does not attempt to follow any one spec, though you'll find it most similarly follows Github's flavor of markdown.
