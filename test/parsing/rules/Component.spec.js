@@ -65,7 +65,7 @@ describe('Component Rule', () => {
       rule.matches('<MyComponent />');
       
       expect(rule.produce()).toEqual({
-        c: 'MyComponent',
+        c: 'MyComponent'
       });
     });
 
