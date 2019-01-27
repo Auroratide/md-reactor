@@ -110,5 +110,17 @@ describe('Component Rule', () => {
         }
       });
     });
+
+    it('should allow nested components of the same name', () => {
+      rule.matches('<span><span>text</span></span>');
+
+      expect(rule.produce()).toEqual({
+        c: 'span',
+        d: {
+          c: 'span',
+          d: 'text'
+        }
+      });
+    });
   });
 });
