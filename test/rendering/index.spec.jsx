@@ -85,6 +85,11 @@ describe('md-reactor renderer', () => {
         <dt>Markdown in HTML</dt>
         <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
       </dl>
+
+      <h1>Custom Parser Rules</h1>
+      <div className="infobox">
+        <p>This is an infobox with <strong>standard markdown</strong> and <sup>custom markdown</sup>!</p>
+      </div>
     </div>)).toBe(true);
   });
 });

@@ -307,3 +307,70 @@ You may also use inline HTML, which is especially useful for tags without a mark
   <dt>Markdown in HTML</dt>
   <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
 </dl>
+
+# Special Features
+
+**md-reactor** has a few special features that allow you to customize parsing and rendering. If you've ever wanted to define your own special syntax or render your own React components, here's how!
+
+## Custom Parser Rules
+
+Custom parser rules allow you to define your own custom markdown syntax. So, you can personalize the markdown you use to best fit the particular needs of your site.
+
+To do this, you need to follow the below steps. Don't worry, we'll be using an example to illustrate this!
+
+1. Define a rule by extending the `Rule` class
+2. Add the rule to the parsing context
+
+Let's say that our website makes extensive use of **infoboxes** meant to show information to the reader that is perhaps helpful but not essential for understanding the whole article. We use them a lot, so we want to define our own syntax for them. And we want to use three commas to denote the infoboxes, like below:
+
+    ,,,
+    This is an infobox!
+    ,,,
+
+First, we **define a rule by extending the** `Rule` **class**.
+
+```
+import { Rule, ProductionBuilder } from 'md-reactor/parsing';
+
+export default class Infobox extends Rule {
+  constructor(context) {
+    super(/^,,,\r?\n((?:.|\r?\n)*)\r?\n,,,/, context);
+  }
+
+  text() {
+    return this.match[1];
+  }
+
+  produce() {
+    return new ProductionBuilder()
+      .component('div')
+      .props({
+        className: 'infobox'
+      })
+      .children(this.context.asBlock.parse(this.text()))
+      .build();
+  }
+}
+```
+
+Let's dissect this code a little further.
+
+* The parser is **regex-based**, meaning it uses regex to determine whether a block of text matches the given rule. You define the regex in the constructor, making sure to use capture groups for any important text or attributes. Note to _always include the beginning_ `^` _caret_, as the parser always looks at the current front of the string.
+* If you use capture groups in your regex definition, they will be stored in the `this.match` instance variable. `this.match[0]` contains the entire matched string, and every index afterward will contain the content of your capture groups.
+* Finally, define the `produce()` method in order to convert the rule into the object notation that the renderer understands. You can use `ProductionBuilder` to create the object notation for you.
+* So what is `this.context`? The context holds some information regarding the entire parsing process. It principally allows you to parse children further; this way, we can have markdown inside of our infobox! `this.context.asBlock.parse()` will parse text as block elements (paragraphs, code blocks, etc), and `this.context.asInline.parse()` will parse text as inline elements (strong, italics, etc).
+
+Second, **add the rule to the parsing context**. This is done when parsing your overall markdown content, as below:
+
+```
+import Parser from 'md-reactor/parsing';
+import Infobox from './rules/Infobox';
+
+const object = Parser
+  .withBlockRules([InfoBox])
+  .parse(markdown);
+```
+
+The Parser defines two methods `withBlockRules()`, for rules meant to be parsed at the block level, and `withInlineRules()`, for rules meant to be parsed at the inline level. Both of these methods take an **array of rule classes** as a parameter, so you may declare more than one rule at once. The rules should be in order of precedence, meaning rules at the beginning of the ray will be attempted first by the parser. Also, all custom rules have precedence over the built-in rules, so you can actually override innate rules if you wish.
+
+Feel free to utilize any of the [built-in rules](https://github.com/Auroratide/md-reactor/tree/master/lib/parsing/rules) as examples and inspiration for defining your own custom rules!

@@ -93,3 +93,10 @@ Inline HTML
   <dt>Markdown in HTML</dt>
   <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
 </dl>
+
+Custom Parser Rules
+===============================================================================
+
+,,,
+This is an infobox with **standard markdown** and ^^custom markdown^^!
+,,,

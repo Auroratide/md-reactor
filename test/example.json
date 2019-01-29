@@ -213,4 +213,22 @@
       "d": "Tags"
     }, " work instead."]
   } ]
+}, {
+  "c": "h1",
+  "d": "Custom Parser Rules"
+}, {
+  "c": "div",
+  "p": {
+    "className": "infobox"
+  },
+  "d": {
+    "c": "p",
+    "d": [ "This is an infobox with ", {
+      "c": "strong",
+      "d": "standard markdown"
+    }, " and ", {
+      "c": "sup",
+      "d": "custom markdown"
+    }, "!" ]
+  }
 } ]
