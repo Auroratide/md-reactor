@@ -7,8 +7,8 @@
 1. [Usage](#usage)
 2. [Supported Syntax](#supported-syntax)
 3. [Special Features](#special-features)
-  1. [Custom Parser Rules](#custom-parser-rules)
-  2. [Render Custom Components](#render-custom-components)
+  * [Custom Parser Rules](#custom-parser-rules)
+  * [Render Custom Components](#render-custom-components)
 
 <a name="usage"></a>
 # Usage
