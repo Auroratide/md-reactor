@@ -1,0 +1,216 @@
+[ {
+  "c": "p",
+  "d": "This file is used for functionally testing aspects of the md-reactor library."
+}, {
+  "c": "h1",
+  "d": "Paragraphs"
+}, {
+  "c": "p",
+  "d": "Paragraphs are separated by at least two spaces."
+}, {
+  "c": "p",
+  "d": "Paragraphs are separated by at least two spaces."
+}, {
+  "c": "p",
+  "d": "Paragraphs are separated by at least two spaces."
+}, {
+  "c": "h1",
+  "d": "Headers"
+}, {
+  "c": "h1",
+  "d": "h1"
+}, {
+  "c": "h2",
+  "d": "h2"
+}, {
+  "c": "h3",
+  "d": "h3"
+}, {
+  "c": "h4",
+  "d": "h4"
+}, {
+  "c": "h5",
+  "d": "h5"
+}, {
+  "c": "h6",
+  "d": "h6"
+}, {
+  "c": "h1",
+  "d": "h1-alt"
+}, {
+  "c": "h2",
+  "d": "h2-alt"
+}, {
+  "c": "h1",
+  "d": "Emphasis"
+}, {
+  "c": "p",
+  "d": [ "A paragraph may contain ", {
+    "c": "em",
+    "d": "standard emphasis"
+  }, ", ", {
+    "c": "strong",
+    "d": "strong emphasis"
+  }, ", or ", {
+    "c": "del",
+    "d": "strikethrough"
+  }, ". ", {
+    "c": "em",
+    "d": "Standard emphasis"
+  }, " and ", {
+    "c": "strong",
+    "d": "strong emphasis"
+  }, " have alternative syntaxes. Text can exhibit ", {
+    "c": "strong",
+    "d": {
+      "c": "em",
+      "d": "both"
+    }
+  }, " at the same time." ]
+}, {
+  "c": "h1",
+  "d": "Lists"
+}, {
+  "c": "ul",
+  "d": {
+    "c": "li",
+    "d": [ {
+      "c": "p",
+      "d": "Unordered List"
+    }, {
+      "c": "ul",
+      "d": [ {
+        "c": "li",
+        "d": "Sub-item 1"
+      }, {
+        "c": "li",
+        "d": "Sub-item 2"
+      } ]
+    } ]
+  }
+}, {
+  "c": "ol",
+  "d": [ {
+    "c": "li",
+    "d": "Ordered List"
+  }, {
+    "c": "li",
+    "d": "Second Item"
+  }, {
+    "c": "li",
+    "d": [ {
+      "c": "p",
+      "d": "Third Item"
+    }, {
+      "c": "ol",
+      "p": {
+        "start": "10"
+      },
+      "d": [{
+        "c": "li",
+        "d": "Lists can start"
+      }, {
+        "c": "li",
+        "d": "at numbers other than 1"
+      } ]
+    } ]
+  } ]
+}, {
+  "c": "h1",
+  "d": "Links"
+}, {
+  "c": "p",
+  "d": [ "A sample ", {
+    "c": "a",
+    "p": {
+      "href": "https://auroratide.com"
+    },
+    "d": "link to my website"
+  }, "! Links may ", {
+    "c": "a",
+    "p": {
+      "href": "https://auroratide.com",
+      "title": "My Website"
+    },
+    "d": "have titles"
+  }, "." ]
+}, {
+  "c": "h1",
+  "d": "Images"
+}, {
+  "c": "p",
+  "d": {
+    "c": "img",
+    "p": {
+      "src": "https://auroratide.com/assets/logo/logo_0120.png",
+      "title": "It's an A",
+      "alt": "Auroratide Logo"
+    }
+  }
+}, {
+  "c": "h1",
+  "d": "Code"
+}, {
+  "c": "p",
+  "d": [ "In Javascript, you can use ", {
+    "c": "code",
+    "d": "const"
+  }, " or ", {
+    "c": "code",
+    "d": "let"
+  }, " to declare a variable." ]
+}, {
+  "c": "pre",
+  "d": {
+    "c": "code",
+    "d": "const x = 5;\n\nconsole.log(x + 2);"
+  }
+}, {
+  "c": "pre",
+  "d": {
+    "c": "code",
+    "d": "const x = 5;\n\nconsole.log(x + 2);"
+  }
+}, {
+  "c": "h1",
+  "d": "Blockquotes"
+}, {
+  "c": "blockquote",
+  "d": [ {
+    "c": "p",
+    "d": "This is a blockquote."
+  }, {
+    "c": "p",
+    "d": "It can be multiple paragraphs long."
+  } ]
+}, {
+  "c": "h1",
+  "d": "Horizontal Rule"
+}, {
+  "c": "hr"
+}, {
+  "c": "hr"
+}, {
+  "c": "hr"
+}, {
+  "c": "h1",
+  "d": "Inline HTML"
+}, {
+  "c": "dl",
+  "d": [ {
+    "c": "dt",
+    "d": "Definition List"
+  }, {
+    "c": "dd",
+    "d": "Can be used with inline HTML"
+  }, {
+    "c": "dt",
+    "d": "Markdown in HTML"
+  }, {
+    "c": "dd",
+    "d": ["Does not **work**. ", {
+      "c": "strong",
+      "d": "Tags"
+    }, " work instead."]
+  } ]
+} ]

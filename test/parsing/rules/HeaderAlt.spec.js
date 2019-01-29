@@ -39,6 +39,11 @@ describe('HeaderAlt Rule', () => {
       expect(rule.matches('h1------')).toBeFalsy();
     });
 
+    it('should not match when there is no text above the underline', () => {
+      expect(rule.matches('\n======')).toBeFalsy();
+      expect(rule.matches('\n------')).toBeFalsy();
+    });
+
     it('should not match ordinary text', () => {
       expect(rule.matches('Not italic')).toBeFalsy();
     });

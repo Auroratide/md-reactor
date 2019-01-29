@@ -2,8 +2,6 @@
 
 **md-reactor** is a utility library for parsing and rendering **markdown** in **React** applications. Hence the name!
 
-By the way, this very README file is used for end-to-end testing the library!
-
 # Usage
 
 In **md-reactor**, there is **parsing** and **rendering**. The Parser takes as input a string containing markdown and converts it into an object representation of the document. The Renderer is a React component that takes that object representation and converts it into the appropriate components to show on a web page.
