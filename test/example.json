@@ -231,4 +231,10 @@
       "d": "custom markdown"
     }, "!" ]
   }
+}, {
+  "c": "h1",
+  "d": "Render Custom Components"
+}, {
+  "c": "Warning",
+  "d": "This is a warning."
 } ]

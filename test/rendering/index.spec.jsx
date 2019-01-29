@@ -5,13 +5,17 @@ import Renderer from '../../lib/rendering';
 import { mount } from '../util/enzyme';
 
 describe('md-reactor renderer', () => {
+  const Warning = ({ children }) => <aside className="warning">{children}</aside>;
+
   it('should render the README', () => {
     const content = {
       c: 'div',
       d: JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'example.json'), 'utf-8'))
     };
+
+    const library = { Warning };
     
-    const wrapper = mount(<Renderer value={content} />);
+    const wrapper = mount(<Renderer value={content} library={library} />);
 
     expect(wrapper.children().equals(<div>
       <p>This file is used for functionally testing aspects of the md-reactor library.</p>
@@ -90,6 +94,9 @@ describe('md-reactor renderer', () => {
       <div className="infobox">
         <p>This is an infobox with <strong>standard markdown</strong> and <sup>custom markdown</sup>!</p>
       </div>
+
+      <h1>Render Custom Components</h1>
+      <Warning>This is a warning.</Warning>
     </div>)).toBe(true);
   });
 });

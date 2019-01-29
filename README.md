@@ -374,3 +374,39 @@ const object = Parser
 The Parser defines two methods `withBlockRules()`, for rules meant to be parsed at the block level, and `withInlineRules()`, for rules meant to be parsed at the inline level. Both of these methods take an **array of rule classes** as a parameter, so you may declare more than one rule at once. The rules should be in order of precedence, meaning rules at the beginning of the ray will be attempted first by the parser. Also, all custom rules have precedence over the built-in rules, so you can actually override innate rules if you wish.
 
 Feel free to utilize any of the [built-in rules](https://github.com/Auroratide/md-reactor/tree/master/lib/parsing/rules) as examples and inspiration for defining your own custom rules!
+
+## Render Custom Components
+
+This is the true superpower of **md-reactor**. Simply speaking, the `Renderer` is capable of rendering your personalized React components. In the context of parsing, this means that _from markdown_ you can ultimately render any component in your personal library. Let's see how that works!
+
+First, let's talk about the parser. The parser converts markdown into an object notation that encodes what components to render. The component names, interestingly, can be _any string_. So actually, the following markdown...
+
+    <MyComponent text="Super cool!" />
+
+...will produce the following object:
+
+    {
+      "c": "MyComponent",
+      "p": {
+        "text": "Super cool!"
+      }
+    }
+
+Notice the `"MyComponent"` in there? That's the name of your custom component. So, how does the renderer know what to render when it sees that name?
+
+To render custom components with the Renderer, you only need to supply a prop called `library`. The `library` prop is a standard Javascript object whose keys are the names of your custom components and whose values are references to the respective components.
+
+So if we want to render `MyComponent`, all we need to do is supply this component to the `library` prop like so:
+
+    import React from 'react';
+    import Renderer from 'md-reactor/rendering';
+    import MyComponent from './MyComponent';
+    
+    const library = {
+      MyComponent
+    };
+    
+    const Content = ({ contentObject }) =>
+      <div className='content'>
+        <Renderer value={contentObject} library={library} />
+      </div>;

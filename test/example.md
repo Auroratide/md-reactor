@@ -100,3 +100,10 @@ Custom Parser Rules
 ,,,
 This is an infobox with **standard markdown** and ^^custom markdown^^!
 ,,,
+
+Render Custom Components
+===============================================================================
+
+<Warning>
+  This is a warning.
+</Warning>
