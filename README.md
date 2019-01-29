@@ -2,6 +2,15 @@
 
 **md-reactor** is a utility library for parsing and rendering **markdown** in **React** applications. Hence the name!
 
+**Table of Contents**
+
+1. [Usage](#usage)
+2. [Supported Syntax](#supported-syntax)
+3. [Special Features](#special-features)
+  1. [Custom Parser Rules](#custom-parser-rules)
+  2. [Render Custom Components](#render-custom-components)
+
+<a name="usage"></a>
 # Usage
 
 In **md-reactor**, there is **parsing** and **rendering**. The Parser takes as input a string containing markdown and converts it into an object representation of the document. The Renderer is a React component that takes that object representation and converts it into the appropriate components to show on a web page.
@@ -26,6 +35,7 @@ const Content = ({ contentObject }) =>
   </div>;
 ```
 
+<a name="supported-syntax"></a>
 # Supported Syntax
 
 It turns out there are lots of ways markdown can be parsed and interpretted, leading to specs such as the [CommonMark Spec](https://spec.commonmark.org/), as well as different non-canonical extensions such as [Github's table syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables). At present, **md-reactor** does not attempt to follow any one spec, though you'll find it most similarly follows Github's flavor of markdown.
@@ -308,10 +318,12 @@ You may also use inline HTML, which is especially useful for tags without a mark
   <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
 </dl>
 
+<a name="special-features"></a>
 # Special Features
 
 **md-reactor** has a few special features that allow you to customize parsing and rendering. If you've ever wanted to define your own special syntax or render your own React components, here's how!
 
+<a name="custom-parser-rules"></a>
 ## Custom Parser Rules
 
 Custom parser rules allow you to define your own custom markdown syntax. So, you can personalize the markdown you use to best fit the particular needs of your site.
@@ -375,6 +387,7 @@ The Parser defines two methods `withBlockRules()`, for rules meant to be parsed 
 
 Feel free to utilize any of the [built-in rules](https://github.com/Auroratide/md-reactor/tree/master/lib/parsing/rules) as examples and inspiration for defining your own custom rules!
 
+<a name="render-custom-components"></a>
 ## Render Custom Components
 
 This is the true superpower of **md-reactor**. Simply speaking, the `Renderer` is capable of rendering your personalized React components. In the context of parsing, this means that _from markdown_ you can ultimately render any component in your personal library. Let's see how that works!
