@@ -133,7 +133,13 @@
       "title": "My Website"
     },
     "d": "have titles"
-  }, "." ]
+  }, ". Standard links such as ", {
+    "c": "a",
+    "p": {
+      "href": "https://auroratide.com"
+    },
+    "d": "https://auroratide.com"
+  }, " are automatically detected as well." ]
 }, {
   "c": "h1",
   "d": "Images"

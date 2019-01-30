@@ -173,17 +173,22 @@ Links are defined using brackets followed by parentheses. The link text goes in 
     A sample [link to my website](https://auroratide.com)!
     
     Links may [have titles](https://auroratide.com "My Website").
+    
+    Standard links, like https://auroratide.com, are also automatically detected.
 
 **...becomes this html...**
 
     <p>A sample <a href="https://auroratide.com">link to my website</a>!</p>
     <p>Links may <a href="https://auroratide.com" title="My Website">have titles</a>.</p>
+    <p>Standard links, like <a href="https://auroratide.com">https://auroratide.com</a>, are also automatically detected.</p>
 
 **...which renders as this:**
 
 A sample [link to my website](https://auroratide.com)!
 
 Links may [have titles](https://auroratide.com "My Website").
+
+Standard links, like https://auroratide.com, are also automatically detected.
 
 ## Images
 

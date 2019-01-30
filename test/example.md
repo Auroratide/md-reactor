@@ -46,7 +46,7 @@ Lists
 Links
 ===============================================================================
 
-A sample [link to my website](https://auroratide.com)! Links may [have titles](https://auroratide.com "My Website").
+A sample [link to my website](https://auroratide.com)! Links may [have titles](https://auroratide.com "My Website"). Standard links such as https://auroratide.com are automatically detected as well.
 
 Images
 ===============================================================================

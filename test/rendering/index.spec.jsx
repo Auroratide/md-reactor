@@ -62,7 +62,7 @@ describe('md-reactor renderer', () => {
       </ol>
 
       <h1>Links</h1>
-      <p>A sample <a href="https://auroratide.com">link to my website</a>! Links may <a href="https://auroratide.com" title="My Website">have titles</a>.</p>
+      <p>A sample <a href="https://auroratide.com">link to my website</a>! Links may <a href="https://auroratide.com" title="My Website">have titles</a>. Standard links such as <a href="https://auroratide.com">https://auroratide.com</a> are automatically detected as well.</p>
 
       <h1>Images</h1>
       <p><img src="https://auroratide.com/assets/logo/logo_0120.png" title="It's an A" alt="Auroratide Logo" /></p>
