@@ -2,6 +2,7 @@ import React from 'react';
 import path from 'path';
 import fs from 'fs';
 import Renderer from '../../lib/rendering';
+import SyntaxHighlighter from '../../lib/rendering/SyntaxHighlighter';
 import { mount } from '../util/enzyme';
 
 describe('md-reactor renderer', () => {
@@ -68,7 +69,7 @@ describe('md-reactor renderer', () => {
 
       <h1>Code</h1>
       <p>In Javascript, you can use <code>const</code> or <code>let</code> to declare a variable.</p>
-      <pre><code>{'const x = 5;\n\nconsole.log(x + 2);'}</code></pre>
+      <SyntaxHighlighter language="javascript">{'const x = 5;\n\nconsole.log(x + 2);'}</SyntaxHighlighter>
       <pre><code>{'const x = 5;\n\nconsole.log(x + 2);'}</code></pre>
 
       <h1>Blockquotes</h1>

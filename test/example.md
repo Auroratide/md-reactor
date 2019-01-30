@@ -58,7 +58,7 @@ Code
 
 In Javascript, you can use `const` or `let` to declare a variable.
 
-```
+```javascript
 const x = 5;
 
 console.log(x + 2);

@@ -160,10 +160,10 @@
     "d": "let"
   }, " to declare a variable." ]
 }, {
-  "c": "pre",
-  "d": {
-    "c": "code",
-    "d": "const x = 5;\n\nconsole.log(x + 2);"
+  "c": "SyntaxHighlighter",
+  "d": "const x = 5;\n\nconsole.log(x + 2);",
+  "p": {
+    "language": "javascript"
   }
 }, {
   "c": "pre",

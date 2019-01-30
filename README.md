@@ -203,17 +203,17 @@ Images are defined with an exclamation point followed by the alt-text in bracket
 
 ## Code
 
-Inline code can be defined with single backticks, and code blocks can be defined within three backticks.
+Inline code can be defined with single backticks, and code blocks can be defined with a 4-space indent.
 
 **This markdown...**
 
     In Javascript, you can use `const` or `let` to declare a variable.
     
-    ```
-    const x = 5;
     
-    console.log(x + 2);
-    ```
+        const x = 5;
+        
+        console.log(x + 2);
+    
 
 **...becomes this html...**
 
@@ -230,7 +230,35 @@ Inline code can be defined with single backticks, and code blocks can be defined
 
 In Javascript, you can use `const` or `let` to declare a variable.
 
-```
+    const x = 5;
+    
+    console.log(x + 2);
+
+## Syntax Highlighting
+
+Syntax highlighting is supported when used in conjunction with the Renderer. **md-reactor** uses [Prism](https://prismjs.com/) to highlight code. To specify code you want highlighted, encase your code block in triple backticks. The language for the code should be provided in order to get the correct highlighting.
+
+**Note:** For the syntax highlighter to work, it _does not_ parse to base html components. It parses to a `SyntaxHighlighter` component which is built into **md-reactor**. If you use the `Renderer` component, everything will work nicely.
+
+**This markdown...**
+
+    ```javascript
+    const x = 5;
+    
+    console.log(x + 2);
+    ```
+
+**...becomes this...**
+
+    <SyntaxHighlighter language="javascript">
+      const x = 5;
+      
+      console.log(x + 2);
+    </SyntaxHighlighter>
+
+**...which renders as this:**
+
+```javascript
 const x = 5;
 
 console.log(x + 2);

@@ -16,6 +16,10 @@ describe('HighlightedCodeBlock Rule', () => {
       expect(rule.matches('```\ncodeblock\n```')).toBeTruthy();
     });
 
+    it('should match triple backticks with a language', () => {
+      expect(rule.matches('```javascript\ncodeblock\n```')).toBeTruthy();
+    });
+
     it('should not match triple backticks inline', () => {
       expect(rule.matches('```codeblock```')).toBeFalsy();
     });
@@ -29,6 +33,11 @@ describe('HighlightedCodeBlock Rule', () => {
       expect(rule.matches('``\ncodeblock\n``')).toBeFalsy();
     });
 
+    it('should not match invalid language name', () => {
+      expect(rule.matches('```$\ncodeblock\n```')).toBeFalsy();
+      expect(rule.matches('```T\ncodeblock\n```')).toBeFalsy();
+    });
+
     it('should not match ordinary text', () => {
       expect(rule.matches('Not italic')).toBeFalsy();
     });
@@ -40,10 +49,20 @@ describe('HighlightedCodeBlock Rule', () => {
       rule.matches('```\ncodeblock\n```');
       
       expect(rule.produce()).toEqual({
-        c: 'pre',
-        d: {
-          c: 'code',
-          d: 'codeblock'
+        c: 'SyntaxHighlighter',
+        d: 'codeblock',
+        p: {}
+      });
+    });
+
+    it('should include language as a prop', () => {
+      rule.matches('```java\ncodeblock\n```');
+      
+      expect(rule.produce()).toEqual({
+        c: 'SyntaxHighlighter',
+        d: 'codeblock',
+        p: {
+          language: 'java'
         }
       });
     });
@@ -52,11 +71,9 @@ describe('HighlightedCodeBlock Rule', () => {
       rule.matches('```\ncodeblock\n\nwith newlines\n```');
       
       expect(rule.produce()).toEqual({
-        c: 'pre',
-        d: {
-          c: 'code',
-          d: 'codeblock\n\nwith newlines'
-        }
+        c: 'SyntaxHighlighter',
+        d: 'codeblock\n\nwith newlines',
+        p: {}
       });
     });
   });
