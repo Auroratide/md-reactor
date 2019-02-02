@@ -1,14 +1,20 @@
 {
   "name": "md-reactor",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A utility library for parsing and rendering markdown in React applications",
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint '{lib,test}/**/*.js'",
     "test": "jest test"
   },
-  "author": "Timothy Foster",
+  "author": {
+    "name": "Timothy Foster",
+    "url": "https://auroratide.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Auroratide/md-reactor"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.3.1",
