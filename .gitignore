@@ -1,3 +1,9 @@
-node_modules/
+# IDE
 .vscode/
-dist/
+
+# NPM
+node_modules/
+
+# OUT
+parsing/
+rendering/

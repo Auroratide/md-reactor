@@ -2,9 +2,11 @@
   "name": "md-reactor",
   "version": "0.1.0",
   "description": "A utility library for parsing and rendering markdown in React applications",
+  "files": [ "parsing", "rendering" ],
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf parsing rendering",
     "build": "rollup -c",
+    "prepublish": "npm run clean && npm run test && npm run build",
     "lint": "eslint '{lib,test}/**/*.js'",
     "test": "jest test"
   },
