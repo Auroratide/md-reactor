@@ -107,3 +107,8 @@ Render Custom Components
 <Warning>
   This is a warning.
 </Warning>
+
+Escaped Characters
+===============================================================================
+
+Characters can be \*escaped\* if we do not want inline parsing to occur.

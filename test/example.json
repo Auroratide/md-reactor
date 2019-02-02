@@ -243,4 +243,10 @@
 }, {
   "c": "Warning",
   "d": "This is a warning."
+}, {
+  "c": "h1",
+  "d": "Escaped Characters"
+}, {
+  "c": "p",
+  "d": "Characters can be *escaped* if we do not want inline parsing to occur."
 } ]

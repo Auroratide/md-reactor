@@ -98,6 +98,9 @@ describe('md-reactor renderer', () => {
 
       <h1>Render Custom Components</h1>
       <Warning>This is a warning.</Warning>
+
+      <h1>Escaped Characters</h1>
+      <p>Characters can be *escaped* if we do not want inline parsing to occur.</p>
     </div>)).toBe(true);
   });
 });
