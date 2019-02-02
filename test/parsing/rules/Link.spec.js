@@ -1,4 +1,4 @@
-import Link from '../../../lib/parsing/rules/Link';
+import Link from '../../../src/parsing/rules/Link';
 import Context from '../../util/MockContext';
 
 describe('Link Rule', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Renderer from '../../lib/rendering/Renderer';
-import ProductionBuilder from '../../lib/parsing/ProductionBuilder';
+import Renderer from '../../src/rendering/Renderer';
+import ProductionBuilder from '../../src/parsing/ProductionBuilder';
 import { shallow } from '../util/enzyme';
 
 describe('Renderer', () => {

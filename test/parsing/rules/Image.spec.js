@@ -1,4 +1,4 @@
-import Image from '../../../lib/parsing/rules/Image';
+import Image from '../../../src/parsing/rules/Image';
 import Context from '../../util/MockContext';
 
 describe('Image Rule', () => {

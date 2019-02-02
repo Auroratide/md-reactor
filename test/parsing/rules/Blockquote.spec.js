@@ -1,4 +1,4 @@
-import Blockquote from '../../../lib/parsing/rules/Blockquote';
+import Blockquote from '../../../src/parsing/rules/Blockquote';
 import Context from '../../util/MockContext';
 
 describe('Blockquote Rule', () => {

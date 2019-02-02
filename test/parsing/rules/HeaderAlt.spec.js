@@ -1,4 +1,4 @@
-import HeaderAlt from '../../../lib/parsing/rules/HeaderAlt';
+import HeaderAlt from '../../../src/parsing/rules/HeaderAlt';
 import Context from '../../util/MockContext';
 
 describe('HeaderAlt Rule', () => {

@@ -1,4 +1,4 @@
-import Whitespace from '../../../lib/parsing/rules/Whitespace';
+import Whitespace from '../../../src/parsing/rules/Whitespace';
 
 describe('Whitespace Rule', () => {
   let rule;

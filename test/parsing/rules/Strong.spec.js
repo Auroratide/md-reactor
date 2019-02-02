@@ -1,4 +1,4 @@
-import Strong from '../../../lib/parsing/rules/Strong';
+import Strong from '../../../src/parsing/rules/Strong';
 import Context from '../../util/MockContext';
 
 describe('Strong Rule', () => {

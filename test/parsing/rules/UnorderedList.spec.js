@@ -1,4 +1,4 @@
-import UnorderedList from '../../../lib/parsing/rules/UnorderedList';
+import UnorderedList from '../../../src/parsing/rules/UnorderedList';
 import Context from '../../util/MockContext';
 
 describe('UnorderedList Rule', () => {

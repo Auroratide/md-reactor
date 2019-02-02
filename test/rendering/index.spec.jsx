@@ -1,8 +1,8 @@
 import React from 'react';
 import path from 'path';
 import fs from 'fs';
-import { Renderer } from '../../lib/rendering';
-import SyntaxHighlighter from '../../lib/rendering/SyntaxHighlighter';
+import { Renderer } from '../../src/rendering';
+import SyntaxHighlighter from '../../src/rendering/SyntaxHighlighter';
 import { mount } from '../util/enzyme';
 
 describe('md-reactor renderer', () => {

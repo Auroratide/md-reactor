@@ -1,6 +1,6 @@
-import ProductionBuilder from '../../lib/parsing/ProductionBuilder';
-import Rule from '../../lib/parsing/rules/Rule';
-import Parser from '../../lib/parsing/Parser';
+import ProductionBuilder from '../../src/parsing/ProductionBuilder';
+import Rule from '../../src/parsing/rules/Rule';
+import Parser from '../../src/parsing/Parser';
 
 describe('Parser', () => {
   it('should return empty array when input is empty', () => {

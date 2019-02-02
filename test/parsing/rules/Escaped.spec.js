@@ -1,4 +1,4 @@
-import Escaped from '../../../lib/parsing/rules/Escaped';
+import Escaped from '../../../src/parsing/rules/Escaped';
 import Context from '../../util/MockContext';
 
 describe('Escaped Rule', () => {

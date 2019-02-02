@@ -1,4 +1,4 @@
-import OrderedList from '../../../lib/parsing/rules/OrderedList';
+import OrderedList from '../../../src/parsing/rules/OrderedList';
 import Context from '../../util/MockContext';
 
 describe('OrderedList Rule', () => {

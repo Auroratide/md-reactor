@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default [ {
-  input: path.join(__dirname, 'lib/parsing/index.js'),
+  input: path.join(__dirname, 'src/parsing/index.js'),
   output: {
     file: 'parsing/index.js',
     name: 'md-reactor',
@@ -9,7 +9,7 @@ export default [ {
   }
 }, {
   external: ['react', 'react-syntax-highlighter'],
-  input: path.join(__dirname, 'lib/rendering/index.js'),
+  input: path.join(__dirname, 'src/rendering/index.js'),
   output: {
     file: 'rendering/index.js',
     name: 'md-reactor',

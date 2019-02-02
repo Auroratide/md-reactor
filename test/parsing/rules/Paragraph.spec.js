@@ -1,4 +1,4 @@
-import Paragraph from '../../../lib/parsing/rules/Paragraph';
+import Paragraph from '../../../src/parsing/rules/Paragraph';
 import Context from '../../util/MockContext';
 
 describe('Paragraph Rule', () => {

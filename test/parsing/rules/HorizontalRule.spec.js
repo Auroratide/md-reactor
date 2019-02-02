@@ -1,4 +1,4 @@
-import HorizontalRule from '../../../lib/parsing/rules/HorizontalRule';
+import HorizontalRule from '../../../src/parsing/rules/HorizontalRule';
 import Context from '../../util/MockContext';
 
 describe('HorizontalRule Rule', () => {

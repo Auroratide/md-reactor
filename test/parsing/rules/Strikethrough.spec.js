@@ -1,4 +1,4 @@
-import Strikethrough from '../../../lib/parsing/rules/Strikethrough';
+import Strikethrough from '../../../src/parsing/rules/Strikethrough';
 import Context from '../../util/MockContext';
 
 describe('Strikethrough Rule', () => {

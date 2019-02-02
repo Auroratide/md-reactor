@@ -1,4 +1,4 @@
-import Header from '../../../lib/parsing/rules/Header';
+import Header from '../../../src/parsing/rules/Header';
 import Context from '../../util/MockContext';
 
 describe('Header Rule', () => {

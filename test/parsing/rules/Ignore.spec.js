@@ -1,4 +1,4 @@
-import Ignore from '../../../lib/parsing/rules/Ignore';
+import Ignore from '../../../src/parsing/rules/Ignore';
 import Context from '../../util/MockContext';
 
 describe('Ignore Rule', () => {

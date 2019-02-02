@@ -1,4 +1,4 @@
-import Component from '../../../lib/parsing/rules/Component';
+import Component from '../../../src/parsing/rules/Component';
 import Context from '../../util/MockContext';
 
 describe('Component Rule', () => {

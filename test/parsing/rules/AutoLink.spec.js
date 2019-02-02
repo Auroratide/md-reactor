@@ -1,4 +1,4 @@
-import AutoLink from '../../../lib/parsing/rules/AutoLink';
+import AutoLink from '../../../src/parsing/rules/AutoLink';
 import Context from '../../util/MockContext';
 
 describe('AutoLink Rule', () => {

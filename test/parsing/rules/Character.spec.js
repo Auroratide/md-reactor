@@ -1,4 +1,4 @@
-import Character from '../../../lib/parsing/rules/Character';
+import Character from '../../../src/parsing/rules/Character';
 
 describe('Character Rule', () => {
   let rule;

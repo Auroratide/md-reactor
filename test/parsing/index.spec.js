@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import { Parser, Rule, ProductionBuilder } from '../../lib/parsing';
+import { Parser, Rule, ProductionBuilder } from '../../src/parsing';
 
 describe('md-reactor parser', () => {
   it('should parse markdown', () => {

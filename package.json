@@ -7,7 +7,7 @@
     "clean": "rm -rf parsing rendering",
     "build": "rollup -c",
     "prepublish": "npm run clean && npm run test && npm run build",
-    "lint": "eslint '{lib,test}/**/*.js'",
+    "lint": "eslint src test",
     "test": "jest test"
   },
   "author": {

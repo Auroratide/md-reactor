@@ -1,4 +1,4 @@
-import BasicCodeBlock from '../../../lib/parsing/rules/BasicCodeBlock';
+import BasicCodeBlock from '../../../src/parsing/rules/BasicCodeBlock';
 import Context from '../../util/MockContext';
 
 describe('BasicCodeBlock Rule', () => {

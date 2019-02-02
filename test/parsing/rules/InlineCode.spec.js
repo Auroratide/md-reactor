@@ -1,4 +1,4 @@
-import InlineCode from '../../../lib/parsing/rules/InlineCode';
+import InlineCode from '../../../src/parsing/rules/InlineCode';
 import Context from '../../util/MockContext';
 
 describe('InlineCode Rule', () => {

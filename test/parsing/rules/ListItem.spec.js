@@ -1,4 +1,4 @@
-import ListItem from '../../../lib/parsing/rules/ListItem';
+import ListItem from '../../../src/parsing/rules/ListItem';
 import Context from '../../util/MockContext';
 
 describe('ListItem Rule', () => {

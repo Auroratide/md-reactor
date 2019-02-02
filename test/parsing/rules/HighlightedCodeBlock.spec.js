@@ -1,4 +1,4 @@
-import HighlightedCodeBlock from '../../../lib/parsing/rules/HighlightedCodeBlock';
+import HighlightedCodeBlock from '../../../src/parsing/rules/HighlightedCodeBlock';
 import Context from '../../util/MockContext';
 
 describe('HighlightedCodeBlock Rule', () => {

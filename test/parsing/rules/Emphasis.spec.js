@@ -1,4 +1,4 @@
-import Emphasis from '../../../lib/parsing/rules/Emphasis';
+import Emphasis from '../../../src/parsing/rules/Emphasis';
 import Context from '../../util/MockContext';
 
 describe('Emphasis Rule', () => {
