@@ -18,7 +18,7 @@ In **md-reactor**, there is **parsing** and **rendering**. The Parser takes as i
 **First, parse the markdown:**
 
 ```
-import Parser from 'md-reactor/parsing';
+import { Parser } from 'md-reactor/parsing';
 
 const object = Parser.parse(markdown);
 ```
@@ -27,7 +27,7 @@ const object = Parser.parse(markdown);
 
 ```
 import React from 'react';
-import Renderer from 'md-reactor/rendering';
+import { Renderer } from 'md-reactor/rendering';
 
 const Content = ({ contentObject }) =>
   <div className='content'>
@@ -408,7 +408,7 @@ Let's dissect this code a little further.
 Second, **add the rule to the parsing context**. This is done when parsing your overall markdown content, as below:
 
 ```
-import Parser from 'md-reactor/parsing';
+import { Parser } from 'md-reactor/parsing';
 import Infobox from './rules/Infobox';
 
 const object = Parser
@@ -445,7 +445,7 @@ To render custom components with the Renderer, you only need to supply a prop ca
 So if we want to render `MyComponent`, all we need to do is supply this component to the `library` prop like so:
 
     import React from 'react';
-    import Renderer from 'md-reactor/rendering';
+    import { Renderer } from 'md-reactor/rendering';
     import MyComponent from './MyComponent';
     
     const library = {

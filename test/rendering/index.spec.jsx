@@ -1,7 +1,7 @@
 import React from 'react';
 import path from 'path';
 import fs from 'fs';
-import Renderer from '../../lib/rendering';
+import { Renderer } from '../../lib/rendering';
 import SyntaxHighlighter from '../../lib/rendering/SyntaxHighlighter';
 import { mount } from '../util/enzyme';
 
