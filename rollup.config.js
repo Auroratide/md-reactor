@@ -13,6 +13,10 @@ export default [ {
   output: {
     file: 'dist/rendering/index.js',
     name: 'md-reactor',
-    format: 'umd'
+    format: 'umd',
+    globals: {
+      'react': 'React',
+      'react-syntax-highlighter': 'ReactSyntaxHighlighter'
+    }
   }
 } ];
