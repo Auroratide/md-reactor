@@ -1,5 +1,5 @@
-const HighlightedCodeBlock = require('../../../lib/parsing/rules/HighlightedCodeBlock');
-const Context = require('../../util/MockContext');
+import HighlightedCodeBlock from '../../../lib/parsing/rules/HighlightedCodeBlock';
+import Context from '../../util/MockContext';
 
 describe('HighlightedCodeBlock Rule', () => {
   let rule;

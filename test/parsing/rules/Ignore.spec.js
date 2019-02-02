@@ -1,5 +1,5 @@
-const Ignore = require('../../../lib/parsing/rules/Ignore');
-const Context = require('../../util/MockContext');
+import Ignore from '../../../lib/parsing/rules/Ignore';
+import Context from '../../util/MockContext';
 
 describe('Ignore Rule', () => {
   let rule;

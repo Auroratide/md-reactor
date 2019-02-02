@@ -1,5 +1,5 @@
-const Paragraph = require('../../../lib/parsing/rules/Paragraph');
-const Context = require('../../util/MockContext');
+import Paragraph from '../../../lib/parsing/rules/Paragraph';
+import Context from '../../util/MockContext';
 
 describe('Paragraph Rule', () => {
   let rule;

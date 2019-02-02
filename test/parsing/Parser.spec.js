@@ -1,6 +1,6 @@
-const ProductionBuilder = require('../../lib/parsing/ProductionBuilder');
-const Rule = require('../../lib/parsing/rules/Rule');
-const Parser = require('../../lib/parsing/Parser');
+import ProductionBuilder from '../../lib/parsing/ProductionBuilder';
+import Rule from '../../lib/parsing/rules/Rule';
+import Parser from '../../lib/parsing/Parser';
 
 describe('Parser', () => {
   it('should return empty array when input is empty', () => {

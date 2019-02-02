@@ -1,5 +1,5 @@
-const HeaderAlt = require('../../../lib/parsing/rules/HeaderAlt');
-const Context = require('../../util/MockContext');
+import HeaderAlt from '../../../lib/parsing/rules/HeaderAlt';
+import Context from '../../util/MockContext';
 
 describe('HeaderAlt Rule', () => {
   let rule;

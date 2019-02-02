@@ -1,5 +1,5 @@
-const BasicCodeBlock = require('../../../lib/parsing/rules/BasicCodeBlock');
-const Context = require('../../util/MockContext');
+import BasicCodeBlock from '../../../lib/parsing/rules/BasicCodeBlock';
+import Context from '../../util/MockContext';
 
 describe('BasicCodeBlock Rule', () => {
   let rule;

@@ -1,5 +1,5 @@
-const UnorderedList = require('../../../lib/parsing/rules/UnorderedList');
-const Context = require('../../util/MockContext');
+import UnorderedList from '../../../lib/parsing/rules/UnorderedList';
+import Context from '../../util/MockContext';
 
 describe('UnorderedList Rule', () => {
   let rule;

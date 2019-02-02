@@ -1,5 +1,5 @@
-const ListItem = require('../../../lib/parsing/rules/ListItem');
-const Context = require('../../util/MockContext');
+import ListItem from '../../../lib/parsing/rules/ListItem';
+import Context from '../../util/MockContext';
 
 describe('ListItem Rule', () => {
   let rule;

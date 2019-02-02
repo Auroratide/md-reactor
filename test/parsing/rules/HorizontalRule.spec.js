@@ -1,5 +1,5 @@
-const HorizontalRule = require('../../../lib/parsing/rules/HorizontalRule');
-const Context = require('../../util/MockContext');
+import HorizontalRule from '../../../lib/parsing/rules/HorizontalRule';
+import Context from '../../util/MockContext';
 
 describe('HorizontalRule Rule', () => {
   let rule;

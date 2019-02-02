@@ -1,5 +1,5 @@
-const InlineCode = require('../../../lib/parsing/rules/InlineCode');
-const Context = require('../../util/MockContext');
+import InlineCode from '../../../lib/parsing/rules/InlineCode';
+import Context from '../../util/MockContext';
 
 describe('InlineCode Rule', () => {
   let rule;

@@ -1,4 +1,4 @@
-const Whitespace = require('../../../lib/parsing/rules/Whitespace');
+import Whitespace from '../../../lib/parsing/rules/Whitespace';
 
 describe('Whitespace Rule', () => {
   let rule;

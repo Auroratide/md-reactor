@@ -1,5 +1,5 @@
-const Strong = require('../../../lib/parsing/rules/Strong');
-const Context = require('../../util/MockContext');
+import Strong from '../../../lib/parsing/rules/Strong';
+import Context from '../../util/MockContext';
 
 describe('Strong Rule', () => {
   let rule;

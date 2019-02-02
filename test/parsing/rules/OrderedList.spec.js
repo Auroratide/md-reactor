@@ -1,5 +1,5 @@
-const OrderedList = require('../../../lib/parsing/rules/OrderedList');
-const Context = require('../../util/MockContext');
+import OrderedList from '../../../lib/parsing/rules/OrderedList';
+import Context from '../../util/MockContext';
 
 describe('OrderedList Rule', () => {
   let rule;

@@ -1,5 +1,5 @@
-const Blockquote = require('../../../lib/parsing/rules/Blockquote');
-const Context = require('../../util/MockContext');
+import Blockquote from '../../../lib/parsing/rules/Blockquote';
+import Context from '../../util/MockContext';
 
 describe('Blockquote Rule', () => {
   let rule;
