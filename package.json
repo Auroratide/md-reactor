@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A utility library for parsing and rendering markdown in React applications",
   "scripts": {
+    "clean": "rm -rf dist",
     "build": "rollup -c",
     "lint": "eslint '{lib,test}/**/*.js'",
     "test": "jest test"
