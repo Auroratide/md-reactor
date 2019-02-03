@@ -2,7 +2,7 @@ import Context from './Context';
 
 import BasicCodeBlock from './rules/BasicCodeBlock';
 import Component from './rules/Component';
-import HighlightedCodeBlock from './rules/HighlightedCodeBlock';
+import LanguageCodeBlock from './rules/LanguageCodeBlock';
 import UnorderedList from './rules/UnorderedList';
 import OrderedList from './rules/OrderedList';
 import HorizontalRule from './rules/HorizontalRule';
@@ -25,7 +25,7 @@ import Character from './rules/Character';
 const STANDARD_BLOCK_RULES = [
   BasicCodeBlock,
   Component,
-  HighlightedCodeBlock,
+  LanguageCodeBlock,
   UnorderedList,
   OrderedList,
   HorizontalRule,

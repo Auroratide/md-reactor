@@ -1,13 +1,13 @@
-import HighlightedCodeBlock from '../../../src/parsing/rules/HighlightedCodeBlock';
+import LanguageCodeBlock from '../../../src/parsing/rules/LanguageCodeBlock';
 import Context from '../../util/MockContext';
 
-describe('HighlightedCodeBlock Rule', () => {
+describe('LanguageCodeBlock Rule', () => {
   let rule;
   let context;
 
   beforeEach(() => {
     context = new Context();
-    rule = new HighlightedCodeBlock(context);
+    rule = new LanguageCodeBlock(context);
   });
 
   describe('matches', () => {
@@ -49,9 +49,12 @@ describe('HighlightedCodeBlock Rule', () => {
       rule.matches('```\ncodeblock\n```');
       
       expect(rule.produce()).toEqual({
-        c: 'SyntaxHighlighter',
-        d: 'codeblock',
-        p: {}
+        c: 'pre',
+        d: {
+          c: 'code',
+          d: 'codeblock',
+          p: {}
+        }
       });
     });
 
@@ -59,10 +62,13 @@ describe('HighlightedCodeBlock Rule', () => {
       rule.matches('```java\ncodeblock\n```');
       
       expect(rule.produce()).toEqual({
-        c: 'SyntaxHighlighter',
-        d: 'codeblock',
-        p: {
-          language: 'java'
+        c: 'pre',
+        d: {
+          c: 'code',
+          d: 'codeblock',
+          p: {
+            className: 'language-java'
+          }
         }
       });
     });
@@ -71,9 +77,12 @@ describe('HighlightedCodeBlock Rule', () => {
       rule.matches('```\ncodeblock\n\nwith newlines\n```');
       
       expect(rule.produce()).toEqual({
-        c: 'SyntaxHighlighter',
-        d: 'codeblock\n\nwith newlines',
-        p: {}
+        c: 'pre',
+        d: {
+          c: 'code',
+          d: 'codeblock\n\nwith newlines',
+          p: {}
+        }
       });
     });
   });

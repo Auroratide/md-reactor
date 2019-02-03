@@ -239,11 +239,9 @@ In Javascript, you can use `const` or `let` to declare a variable.
     
     console.log(x + 2);
 
-## Syntax Highlighting
+## Specify Code Language
 
-Syntax highlighting is supported when used in conjunction with the Renderer. **md-reactor** uses [Prism](https://prismjs.com/) to highlight code. To specify code you want highlighted, encase your code block in triple backticks. The language for the code should be provided in order to get the correct highlighting.
-
-**Note:** For the syntax highlighter to work, it _does not_ parse to base html components. It parses to a `SyntaxHighlighter` component which is built into **md-reactor**. If you use the `Renderer` component, everything will work nicely.
+You can also define a codeblock by wrapping code in triple backticks. In doing so, you may optionally specify the language of the code which will add a class name to the `<code>` element. You may then use this class name to perform syntax highlighting using your favorite syntax highlighter.
 
 **This markdown...**
 
@@ -253,13 +251,15 @@ Syntax highlighting is supported when used in conjunction with the Renderer. **m
     console.log(x + 2);
     ```
 
-**...becomes this...**
+**...becomes this html...**
 
-    <SyntaxHighlighter language="javascript">
-      const x = 5;
-      
-      console.log(x + 2);
-    </SyntaxHighlighter>
+    <pre>
+      <code class="language-javascript">
+        const x = 5;
+        
+        console.log(x + 2);
+      </code>
+    </pre>
 
 **...which renders as this:**
 

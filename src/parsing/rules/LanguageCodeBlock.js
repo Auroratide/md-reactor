@@ -1,7 +1,7 @@
 import Rule from './Rule';
 import ProductionBuilder from '../ProductionBuilder';
 
-export default class HighlightedCodeBlock extends Rule {
+export default class LanguageCodeBlock extends Rule {
   constructor(context) {
     super(/^```([a-z0-9]*)\r?\n((?:(?!```).|\r?\n)*)\r?\n```/, context);
   }
@@ -15,12 +15,15 @@ export default class HighlightedCodeBlock extends Rule {
   }
 
   produce() {
+    const className = this.language() ? `language-${this.language()}` : undefined;
     return new ProductionBuilder()
-      .component('SyntaxHighlighter')
-      .children(this.code())
-      .props({
-        language: this.language()
-      })
+      .component('pre')
+      .children(new ProductionBuilder()
+        .component('code')
+        .children(this.code())
+        .props({ className })
+        .build()
+      )
       .build();
   }
 }
