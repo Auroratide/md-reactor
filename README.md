@@ -61,7 +61,7 @@ You may either use hashes to define headers or the underline style. Headers up t
     Header 2 Alt
     ------
 
-**...becomes this html...**
+**...becomes this html:**
 
     <h1>Header 1</h1>
     <h2>Header 2</h2>
@@ -71,21 +71,6 @@ You may either use hashes to define headers or the underline style. Headers up t
     <h6>Header 6</h6>
     <h1>Header 1 Alt</h1>
     <h2>Header 2 Alt</h2>
-
-**...which renders as this:**
-
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
-
-Header 1 Alt
-======
-
-Header 2 Alt
-------
 
 ## Emphasis
 
@@ -99,19 +84,11 @@ Asterisks and underscores can be used to define emphasis, like italics or bold. 
     
     For strikethrough, use ~~double tildes~~.
 
-**...becomes this html...**
+**...becomes this html:**
 
     <p>For basic emphasis (italics), use single <em>asterisks</em> or <em>underlines</em>.</p>
     <p>For strong emphasis (bold), use double <strong>asterisks</strong> or <strong>underlines</strong>.</p>
     <p>For strikethrough, use <del>double tildes</del>.</p>
-
-**...which renders as this:**
-
-For basic emphasis (italics), use single *asterisks* or _underlines_.
-
-For strong emphasis (bold), use double **asterisks** or __underlines__.
-
-For strikethrough, use ~~double tildes~~.
 
 ## Lists
 
@@ -129,7 +106,7 @@ Ordered and unordered lists can be created and nested within one another. It is 
       10. Lists can start
       11. at numbers other than 1
 
-**...becomes this html...**
+**...becomes this html:**
 
     <ul>
       <li>
@@ -152,18 +129,6 @@ Ordered and unordered lists can be created and nested within one another. It is 
       </li>
     </ol>
 
-**...which renders as this:**
-
-* Unordered List
-  * Sub-item 1
-  * Sub-item 2
-
-1. Ordered List
-2. Second Item
-3. Third Item
-  10. Lists can start
-  11. at numbers other than 1
-
 ## Links
 
 Links are defined using brackets followed by parentheses. The link text goes in the brackets, and the link location goes in the parentheses. An optional title may be provided in quotes with the link location.
@@ -176,19 +141,11 @@ Links are defined using brackets followed by parentheses. The link text goes in 
     
     Standard links, like https://auroratide.com, are also automatically detected.
 
-**...becomes this html...**
+**...becomes this html:**
 
     <p>A sample <a href="https://auroratide.com">link to my website</a>!</p>
     <p>Links may <a href="https://auroratide.com" title="My Website">have titles</a>.</p>
     <p>Standard links, like <a href="https://auroratide.com">https://auroratide.com</a>, are also automatically detected.</p>
-
-**...which renders as this:**
-
-A sample [link to my website](https://auroratide.com)!
-
-Links may [have titles](https://auroratide.com "My Website").
-
-Standard links, like https://auroratide.com, are also automatically detected.
 
 ## Images
 
@@ -198,13 +155,9 @@ Images are defined with an exclamation point followed by the alt-text in bracket
 
     ![Auroratide Logo](https://auroratide.com/assets/logo/logo_0120.png "It's an A")
 
-**...becomes this html...**
+**...becomes this html:**
 
     <p><img src="https://auroratide.com/assets/logo/logo_0120.png" title="It's an A" alt="Auroratide Logo" /></p>
-
-**...which renders as this:**
-
-![Auroratide Logo](https://auroratide.com/assets/logo/logo_0120.png "It's an A")
 
 ## Code
 
@@ -220,7 +173,7 @@ Inline code can be defined with single backticks, and code blocks can be defined
         console.log(x + 2);
     
 
-**...becomes this html...**
+**...becomes this html:**
 
     <p>In Javascript, you can use <code>const</code> or <code>let</code> to declare a variable.</p>
     <pre>
@@ -230,14 +183,6 @@ Inline code can be defined with single backticks, and code blocks can be defined
         console.log(x + 2);
       </code>
     </pre>
-
-**...which renders as this:**
-
-In Javascript, you can use `const` or `let` to declare a variable.
-
-    const x = 5;
-    
-    console.log(x + 2);
 
 ## Specify Code Language
 
@@ -251,7 +196,7 @@ You can also define a codeblock by wrapping code in triple backticks. In doing s
     console.log(x + 2);
     ```
 
-**...becomes this html...**
+**...becomes this html:**
 
     <pre>
       <code class="language-javascript">
@@ -260,14 +205,6 @@ You can also define a codeblock by wrapping code in triple backticks. In doing s
         console.log(x + 2);
       </code>
     </pre>
-
-**...which renders as this:**
-
-```javascript
-const x = 5;
-
-console.log(x + 2);
-```
 
 ## Blockquotes
 
@@ -279,18 +216,12 @@ Blockquotes are specified by prepending the line with a greater-than sign (`>`).
     >
     > It can be multiple paragraphs long.
 
-**...becomes this html...**
+**...becomes this html:**
 
     <blockquote>
       <p>This is a blockquote.</p>
       <p>It can be multiple paragraphs long.</p>
     </blockquote>
-
-**...which renders as this:**
-
-> This is a blockquote.
->
-> It can be multiple paragraphs long.
 
 ## Horizontal Rule
 
@@ -304,19 +235,11 @@ A horizontal rule can be created with at least three hyphens, asterisks, or unde
     
     _____
 
-**...becomes this html...**
+**...becomes this html:**
 
     <hr />
     <hr />
     <hr />
-
-**...which renders as this:**
-
------
-
-*****
-
-_____
 
 ## Inline HTML
 
@@ -332,7 +255,7 @@ You may also use inline HTML, which is especially useful for tags without a mark
       <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
     </dl>
 
-**...becomes this html...**
+**...becomes this html:**
 
     <dl>
       <dt>Definition List</dt>
@@ -341,15 +264,6 @@ You may also use inline HTML, which is especially useful for tags without a mark
       <dt>Markdown in HTML</dt>
       <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
     </dl>
-
-**...which renders as this:**
-
-<dl>
-  <dt>Definition List</dt>
-  <dd>Can be used with inline HTML</dd>
-  <dt>Markdown in HTML</dt>
-  <dd>Does not **work**. <strong>Tags</strong> work instead.</dd>
-</dl>
 
 <a name="special-features"></a>
 # Special Features
