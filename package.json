@@ -15,7 +15,7 @@
   "scripts": {
     "clean": "rm -rf parsing rendering",
     "build": "rollup -c",
-    "prepublish": "npm run clean && npm run test && npm run build",
+    "prepublishOnly": "npm run clean && npm run test && npm run build",
     "lint": "eslint src test",
     "test": "jest test"
   },
@@ -38,10 +38,11 @@
     "eslint": "^5.10.0",
     "eslint-plugin-jest": "^22.1.2",
     "jest": "^24.0.0",
+    "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "rollup": "^1.1.2"
   },
-  "dependencies": {
-    "react": "^16.7.0"
+  "peerDependencies": {
+    "react": "16.x"
   }
 }
