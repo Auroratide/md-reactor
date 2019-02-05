@@ -1,6 +1,6 @@
 {
   "name": "md-reactor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A utility library for parsing and rendering markdown in React applications",
   "keywords": [
     "markdown",
