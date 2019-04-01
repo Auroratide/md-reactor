@@ -1,7 +1,13 @@
 import path from 'path';
+import babel from 'rollup-plugin-babel';
 
 export default [ {
   input: path.join(__dirname, 'src/parsing/index.js'),
+  plugins: [
+    babel({
+      exclude: 'node_modules/**'
+    })
+  ],
   output: {
     file: 'parsing/index.js',
     name: 'md-reactor',
