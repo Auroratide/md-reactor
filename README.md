@@ -17,7 +17,7 @@ In **md-reactor**, there is **parsing** and **rendering**. The Parser takes as i
 
 **First, parse the markdown:**
 
-```
+```js
 import { Parser } from 'md-reactor/parsing';
 
 const object = Parser.parse(markdown);
@@ -25,7 +25,7 @@ const object = Parser.parse(markdown);
 
 **Second, render the object:**
 
-```
+```jsx
 import React from 'react';
 import { Renderer } from 'md-reactor/rendering';
 
@@ -288,7 +288,7 @@ Let's say that our website makes extensive use of **infoboxes** meant to show in
 
 First, we **define a rule by extending the** `Rule` **class**.
 
-```
+```js
 import { Rule, ProductionBuilder } from 'md-reactor/parsing';
 
 export default class Infobox extends Rule {
@@ -321,7 +321,7 @@ Let's dissect this code a little further.
 
 Second, **add the rule to the parsing context**. This is done when parsing your overall markdown content, as below:
 
-```
+```js
 import { Parser } from 'md-reactor/parsing';
 import Infobox from './rules/Infobox';
 
@@ -358,15 +358,17 @@ To render custom components with the Renderer, you only need to supply a prop ca
 
 So if we want to render `MyComponent`, all we need to do is supply this component to the `library` prop like so:
 
-    import React from 'react';
-    import { Renderer } from 'md-reactor/rendering';
-    import MyComponent from './MyComponent';
-    
-    const library = {
-      MyComponent
-    };
-    
-    const Content = ({ contentObject }) =>
-      <div className='content'>
-        <Renderer value={contentObject} library={library} />
-      </div>;
+```jsx
+import React from 'react';
+import { Renderer } from 'md-reactor/rendering';
+import MyComponent from './MyComponent';
+
+const library = {
+  MyComponent
+};
+
+const Content = ({ contentObject }) =>
+  <div className='content'>
+    <Renderer value={contentObject} library={library} />
+  </div>;
+```
